@@ -144,3 +144,12 @@ td{
 .tr-pari{
     background-color: #f1f1f2;
 }
+
+.second-p-section2{
+    margin-top: 50px;
+}
+
+iframe {
+    display:block;
+    width:100%;
+}

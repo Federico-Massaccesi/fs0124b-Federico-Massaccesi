@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 
+
 #sottotitolo{
     background-color:#fdfbf1 ;
     border-top:#fee8af solid 5px ;
@@ -71,7 +72,7 @@ li{
 }
 
 video{
-    width: 100%;
+    width: 68%;
     height: 40vh;
     margin-left:auto ;
     margin-right: auto;

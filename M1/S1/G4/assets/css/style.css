@@ -1,0 +1,146 @@
+/* IMPOSTAZIONI GENERALI */
+
+/* HEADER */
+
+/* MAIN */
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+
+/* TABELLE */
+
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+
+/* FOOTER */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../img/sfondo.png);
+    background-repeat: repeat-y;
+    margin: 15px;
+}
+
+#header{
+    background-color: #357b97;
+    text-align: center;
+    padding: 20px 0 35px 0;
+    margin-bottom: 20px;
+    
+}
+
+p{
+    line-height: 1.5em;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+
+
+#header p {
+    color: white;
+    font-size: 1.5rem;
+}
+
+#header img{
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+.titolo-header{
+    margin-bottom: 25px;
+}
+
+.p-nav{
+    margin-bottom: 10px;
+}
+
+main{
+    border: solid black 1px;
+    padding: 20px;
+    background-color: white;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 2.3rem;
+    line-height: 2.2em;
+    margin-bottom: 25px;
+    
+}
+.credits{
+    color: #357b97;
+   
+    
+}
+.first-li{
+    margin-bottom: 10px;
+    list-style-type: disc;
+    margin-left: 30px;
+    font-size: 1.2rem;
+}
+
+.first-li span{
+    background-color: gainsboro;
+    border: grey solid 1px;
+    border-radius: 15%;
+}
+
+#second-text p {
+    margin-top: 40px;
+}
+
+.second-li{
+    list-style-type: decimal;
+    font-size: 1.2rem;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.last-p-section1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.first-p-section2{
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    
+}
+
+
+th{
+    background-color: #4568c3;
+    font-size: 1.2rem;
+    color: white;
+    border: solidb rgb(255, 255, 255) 1px;
+    height: 75px;
+    width:calc(100% /3);
+    text-align: center;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+.th2,.th3{
+    border-left: solid white 1px;
+}
+
+tr{
+    text-align: center;
+
+font-size: 1.2rem;
+border: 50px;
+
+}
+td{
+    height: 70px;
+    box-sizing: border-box;
+    padding-top: 25px;
+}
+
+.tr-pari{
+    background-color: #f1f1f2;
+}

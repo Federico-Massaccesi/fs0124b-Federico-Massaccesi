@@ -156,10 +156,14 @@ div h2{
     #footer{
         background-color: #25a2c3;
         text-align: center;
-        padding: 50px 50px;
+        padding: 70px 50px;
     }
     #footer h2{
         margin-bottom: 30px;
         font-size: 2rem;
     }
 
+    #footer hr{
+        margin: 40px 80px;
+        color: #c8e7f0;
+    }

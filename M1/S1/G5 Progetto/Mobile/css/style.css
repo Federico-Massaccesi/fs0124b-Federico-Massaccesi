@@ -47,14 +47,14 @@ h1, h2, h3{
     background-repeat: no-repeat;
     text-align: center;
     box-sizing: border-box;
-    padding: 50px 30px 40px 30px;
+    padding: 60px 30px 60px 30px;
     
     
     
 }
 
 #title h1{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 2rem;
     margin-right: 40px;
     margin-left: 40px;
@@ -69,5 +69,29 @@ h1, h2, h3{
     
 }
 #button{
-    margin-top: 40px;
+    margin-top: 50px;
+}
+
+#first-section{
+    padding: 70px 30px 50px 30px;
+    text-align: center;
+}
+
+div h2{
+    margin-bottom: 20px;
+}
+
+.description{
+    margin-bottom: 40px;
+}
+
+
+.notebook-img{
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 40px;
+}
+
+#notebook-img{
+    padding: 0 40px;
 }

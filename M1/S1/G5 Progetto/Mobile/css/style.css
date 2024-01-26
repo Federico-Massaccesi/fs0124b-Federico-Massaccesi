@@ -11,6 +11,7 @@ body{
 }
 
 
+
 h1, h2, h3{
     color: #25a2c3;
     font-family: 'Montserrat', sans-serif;
@@ -34,9 +35,7 @@ h1, h2, h3{
     font-weight: bold;
     
 }
-.container-second-section{
-    border: solid 1px #dee1e3
-}
+
 .logo{
     width: 120px;
     padding: 30px ;
@@ -95,3 +94,46 @@ div h2{
 #notebook-img{
     padding: 0 40px;
 }
+#ceo{
+    background-color:#e22d0e ;
+    padding: 70px 10px 50px 10px;
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+}
+#ceo h2{
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+.ceo-decl{
+    font-style: italic;
+    margin-bottom: 40px;}
+
+    .name-b{
+        font-size: 0.8rem;
+    }
+    
+    .container-second-section{
+        border: solid 1px #dee1e3;
+        margin: 70px 25px 0 25px;
+        text-align: center;
+        
+        
+    }
+    .img-box{
+        width: 100%;
+    }
+    .container-second-section h3{
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    
+    .text-box{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+    }
+    #aside{
+        margin-bottom: 80px;
+    }

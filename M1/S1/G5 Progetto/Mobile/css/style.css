@@ -28,7 +28,19 @@ h1, h2, h3{
 }
 .link-footer{
     color: #c8e7f0;
+    display: block;
+    margin-bottom: 8px;
 }
+
+.link-footer-cright{
+    color: #c8e7f0;
+
+}
+
+.cright{
+    color: #c8e7f0;
+}
+
 .button{
     background-color: #f04c2f;
     font-family: 'Montserrat', sans-serif;
@@ -96,7 +108,7 @@ div h2{
 }
 #ceo{
     background-color:#e22d0e ;
-    padding: 70px 10px 50px 10px;
+    padding: 80px 10px 40px 10px;
     color: white;
     box-sizing: border-box;
     text-align: center;
@@ -116,8 +128,10 @@ div h2{
     
     .container-second-section{
         border: solid 1px #dee1e3;
+        box-shadow: 1px 1px 1px #dee1e3 ;
         margin: 70px 25px 0 25px;
         text-align: center;
+        border-radius: 1%;
         
         
     }
@@ -133,7 +147,19 @@ div h2{
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 50px;
+
     }
     #aside{
         margin-bottom: 80px;
     }
+
+    #footer{
+        background-color: #25a2c3;
+        text-align: center;
+        padding: 50px 50px;
+    }
+    #footer h2{
+        margin-bottom: 30px;
+        font-size: 2rem;
+    }
+

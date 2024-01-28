@@ -80,6 +80,7 @@ h1{
     list-style-type: disc;
     margin-left: 30px;
     font-size: 1.2rem;
+    line-height: 1.5rem;
 }
 
 .first-li span{
@@ -97,6 +98,7 @@ h1{
     font-size: 1.2rem;
     margin-left: 30px;
     margin-bottom: 10px;
+    line-height: 1.5rem;
 }
 
 .last-p-section1{

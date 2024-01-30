@@ -5,7 +5,9 @@ let numberOne = 5
 let numberTwo = 10
 
 if(numberTwo>numberOne){
-  console.log('Il numberTwo è maggiore del numberOne')
+  console.log('il numero maggiore è ' + numberTwo )
+}else{
+  console.log('il numero maggiore è ' + numberOne);
 }
 
 
@@ -38,7 +40,7 @@ if(x % 5 == 0){
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
 
-  let a = 8
+  let a = 6
   let b = 5
   let c = 3
 
@@ -131,7 +133,8 @@ console.log(me)
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+delete me.lastName 
+console.log(me);
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".

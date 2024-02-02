@@ -37,16 +37,18 @@ if(x % 5 == 0){
 
 
 /* ESERCIZIO 4
-  Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
+  Scrivi un algoritmo per verificare che, dati due numeri interi, 
+  il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
 
-  let a = 6
-  let b = 5
-  let c = 3
+ let f = 3
+ let g = 4
+ if(f === 8 || g === 8 || f+g=== 8 || f-g=== 8||g-f===8){
+  console.log('Il numero è 8')
+ }else{
+  console.log('Il numero non è 8')
+ }
 
-  if( a == 8 || b+c == 8 ) {
-    console.log('la condizione è uguale a 8')
-  }
 
 /* ESERCIZIO 5
   Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
@@ -67,8 +69,15 @@ if(x % 5 == 0){
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
 
+let totalShoppingCart1 = 70;
 
-  
+let prezzoScontato = totalShoppingCart1 * 0.8
+
+if (prezzoScontato > 50){
+  console.log('spedizione gratuita')
+}else{
+  console.log(prezzoScontato +10)
+}
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.

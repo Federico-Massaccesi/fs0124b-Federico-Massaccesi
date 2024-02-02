@@ -1,0 +1,94 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e9edee;
+}
+
+main{
+    padding: 40px ;
+}
+
+#logo{
+    background-color: #222f3f;
+    height: 100px ;
+}
+
+.logo{
+    padding: 20px 0 30px 50px ;
+    width: 200px;
+}
+
+#menù{
+    background-color: #354658 ;
+    padding: 15px 0 15px 30px;
+}
+
+.link-menù{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin-left: 20px;
+}
+
+.over-title{
+    background-color: #f56600 ;
+
+    text-align: center;
+    padding: 15px 0;
+    margin-bottom: 40px;
+}
+
+.link-menù1{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin-left: 5px;
+   
+}
+
+#title{
+    background-image: url(../assets/bg-image.png);
+    height: 50px;
+    text-align: center;
+    padding: 100px 0 100px 0;
+    background-size: contain;
+    margin-bottom: 40px;
+    
+}
+.h1{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.h1-2{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+
+
+
+.shop-now{
+    text-decoration: none;
+    color: #29686d;
+    font-weight: bold;
+    display: inline;
+    font-size: 1.7rem;
+    margin-left: 25px;
+
+}
+
+.perf-gift{
+    display: inline;
+    font-size: 1.7rem;
+}
+
+#article{
+    background-color: white;
+    padding:  30px ;
+}
+
+#cont{
+    margin-bottom: 30px;
+}

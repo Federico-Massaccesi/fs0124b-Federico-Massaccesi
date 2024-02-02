@@ -35,7 +35,7 @@ console.log(crazySum(5,6));
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
 */
 
-function crazyDiff(a,b=19){
+function crazyDiff(n){
 
     
 
@@ -109,18 +109,21 @@ function upperFirst(a){
     
      let words = a.split(' ')
      for(let i = 0; i<words.length; i++){
-
-        words[i] = words[i][0].toUpperCase
-
+        
+        let primaLettera = words[i][0].toUpperCase();
+        
+        let restoParola = words[i].slice(1);
+        let parolaCompleta = primaLettera + restoParola
+        console.log(parolaCompleta);
      }
+
+}
 
     
 
-    }
 
 
-
-console.log(upperFirst('CE LA FAREMO'))
+upperFirst('ce la faremo')
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere

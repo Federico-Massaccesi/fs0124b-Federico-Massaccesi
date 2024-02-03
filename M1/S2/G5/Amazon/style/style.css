@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #e9edee;
@@ -74,7 +78,7 @@ main{
     color: #29686d;
     font-weight: bold;
     display: inline;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     margin-left: 25px;
 
 }
@@ -86,9 +90,72 @@ main{
 
 #article{
     background-color: white;
-    padding:  30px ;
+    padding:  25px 0 20px 25px ;
+    margin-bottom: 30px;
 }
 
 #cont{
     margin-bottom: 30px;
 }
+
+.img{
+    width: 25%;
+    
+}
+
+.products{
+    width: 90%;
+    height: 500px;
+    border-radius: 10px;
+    
+    box-shadow: 0 10px 10px 0  #e0e4e8;
+}
+
+#img-cont{
+    display: flex;
+    
+}
+
+#gaming{
+    background-image: url(../assets/img_9.png);
+    height: 550px;
+    
+    
+    background-size: cover;
+
+}
+
+
+#cont-p2{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+#music{
+    background-image: url(../assets/img_10.png);
+    height: 550px;
+    
+    
+    background-size: cover;
+}
+
+.to-top{
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+#to-top{
+    background-color: #354658;
+    padding: 25px;
+    text-align: center;
+}
+
+#logo-footer{
+    background-color: #222f3f;
+    
+    text-align: center;
+    padding: 100px 0;
+}
+
+

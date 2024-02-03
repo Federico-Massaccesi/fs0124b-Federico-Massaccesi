@@ -40,10 +40,7 @@ console.log(petReverse)
     Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.
 */
 
-  let firstPet=petReverse.pop()
 
-  petReverse.push(firstPet)
-  console.log(petReverse)
 
 
 /* ESERCIZIO 5
@@ -70,12 +67,7 @@ const cars = [
   },
 ]
 
-  for(let i = 0 ;i<cars.length; i++){
-     let number =Math.floor(Math.random)*5;
-     
-     cars[i].push(number)
-    
-     console.log(cars)
+  
     
     
      
@@ -83,7 +75,7 @@ const cars = [
 
 
 
-  }
+  
 
 /* ESERCIZIO 6
     Scrivi del codice per aggiungere un nuovo oggetto in ultima posizione nell'array "cars", rispettando la struttura degli altri elementi.

@@ -1,13 +1,15 @@
 /* ESERCIZIO 1
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
-let numberOne = 5
+let numberOne = 7
 let numberTwo = 10
 
 if(numberTwo>numberOne){
   console.log('il numero maggiore è ' + numberTwo )
-}else{
+}else if(numberTwo<numberOne){
   console.log('il numero maggiore è ' + numberOne);
+}else{
+  console.log('I numeri sono uguali');
 }
 
 
@@ -85,7 +87,7 @@ if (prezzoScontato > 50){
   Alla fine mostra il risultato in console.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
@@ -94,7 +96,7 @@ if (prezzoScontato > 50){
 let bla = 'Franco'
 
 
-console.log(typeof bla)
+
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
@@ -144,16 +146,24 @@ console.log(me);
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
-delete me.skills[2]
-console.log(me);
+ me.skills.pop()
+console.log(me)
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 
+let numeri = []
+
+for(let i = 0;i<11;i++){
+  numeri.push(i)
+  
+}
+console.log(numeri);
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+numeri[10]= 100
+console.log(numeri);

@@ -24,23 +24,25 @@ for(let i = 0;i< pets.length; i++){
 /* ESERCIZIO 2
     Scrivi del codice per ordinare alfabeticamente gli elementi dell'array "pets".
 */
-
+{
   let petAlpha = pets.sort()
     console.log(petAlpha)
-  
+}
 /* ESERCIZIO 3
     Scrivi del codice per stampare nuovamente in console gli elementi dell'array "pets", questa volta in ordine invertito.
 */
-
-let petReverse = petAlpha.reverse()
+{
+let petReverse = pets.reverse()
 console.log(petReverse)
-
+}
 
 /* ESERCIZIO 4
     Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.
 */
-
-
+{
+let lastPet = pets[0]
+console.log(lastPet)
+}
 
 
 /* ESERCIZIO 5
@@ -98,10 +100,7 @@ const justTrims = []
 const numericArray = [
   6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
 ]
-let i = numericArray.length 
-while(i!=32){
-  console.log()
-}
+
 
 /* ESERCIZIO 10
     Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno

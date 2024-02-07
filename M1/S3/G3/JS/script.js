@@ -11,7 +11,7 @@ let text = document.querySelector('#text')
 let div = document.createElement('div')
 
 
-button.addEventListener('click',()=> document.body.appendChild(div))
+button.addEventListener('click',()=> document.body.appendChild(document.createElement('div')))
 
 
 

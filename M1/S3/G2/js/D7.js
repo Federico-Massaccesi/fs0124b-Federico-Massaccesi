@@ -22,7 +22,7 @@ let numbers = []
         numbers.push(random)
       }
       
-      console.log(numbers);
+      return numbers
     }
     y()
 /* ESERCIZIO 3 (filter)

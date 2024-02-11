@@ -102,8 +102,17 @@ let bla = 'Franco'
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function pari(a){
 
+if(a %2 === 0){
+  console.log('Il numero è pari')
+}else{
+  console.log('Il numero è dispari');
+}
+
+}
+
+pari(6)
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
   let val = 7

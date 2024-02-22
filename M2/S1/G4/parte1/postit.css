@@ -27,6 +27,12 @@
     font-size: 3rem;
     gap: 20px;
     box-shadow: 5px 5px 5px black;
+    animation-name: posizionamento;
+
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    
+
     
     
     
@@ -64,4 +70,12 @@
 .fifth{
     
     transform: rotate(-8deg);
+}
+
+@keyframes posizionamento {
+
+
+        from{transform: translateZ(500px);}
+        /* from {transform: scale(100,100);}  */
+    
 }

@@ -44,12 +44,6 @@
         opacity: 1;
     }
     
-    40%{
-        transform: translateY(50px);
-        opacity: 0;
-       
-
-    }
 
     50%{
         transform: translateY(50px);

@@ -29,7 +29,7 @@
     box-shadow: 5px 5px 5px black;
     animation-name: posizionamento;
 
-    animation-duration: 3s;
+    animation-duration: 1800ms;
     animation-iteration-count: 1;
     
 
@@ -76,6 +76,5 @@
 
 
         from{transform: translateZ(500px);}
-        /* from {transform: scale(100,100);}  */
     
 }

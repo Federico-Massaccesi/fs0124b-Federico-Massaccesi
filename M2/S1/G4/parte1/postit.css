@@ -1,0 +1,67 @@
+#lavagna{
+    padding: 150px ;
+    background-color: #666666;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+    height: 100vh;
+    perspective: 500px;
+    transform-style: preserve-3d;
+    
+}
+
+
+.post-it{
+
+    margin: 0 50px;
+    width: 50px;
+    height: 25px;
+    border: 1px solid black;
+    padding: 100px 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 3rem;
+    gap: 20px;
+    box-shadow: 5px 5px 5px black;
+    
+    
+    
+    
+}
+
+.post-it:hover{
+    
+    transform: translateZ(130px);
+    transition-duration: 3s;
+    z-index: 10;
+    
+}
+
+.first, .fifth, .seventh{
+    transform: rotate(15deg);
+    background: rgb(254,254,205);
+    background: linear-gradient(180deg, rgba(254,254,205,1) 69%, rgba(128,128,113,1) 100%);
+}
+
+ .second, .fourth, .eighth{
+     
+     transform: rotate(-8deg);
+    background: rgb(203,253,205);
+    background: linear-gradient(180deg, rgba(203,253,205,1) 69%, rgba(158,181,161,1) 100%);
+} 
+
+.third, .sixth{
+    
+    transform: rotate(8deg);
+    background: rgb(98,99,111);
+    background: linear-gradient(360deg, rgba(98,99,111,1) 0%, rgba(201,201,247,1) 100%);
+}
+
+.fifth{
+    
+    transform: rotate(-8deg);
+}

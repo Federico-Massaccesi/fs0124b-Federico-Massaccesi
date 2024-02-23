@@ -186,18 +186,18 @@
 }
 
 .title-articles{
-
+    
     font-weight: bold;
 }
 
 .artists p:nth-child(3){
-
+    
     color: grey;
     
 }
 
 .artists p:nth-child(3) img{
-
+    
     vertical-align: middle;
     margin-left: 5px;
 }
@@ -205,7 +205,7 @@
 
 
 .articles-footer{
-    width: 40%;
+    width: 60%;
     display: flex;
     margin-left: 20%;
     padding-top: 70px;
@@ -213,7 +213,7 @@
 
 .total-articles-area{
     position: relative;
-    width: 40%;
+    width: 67%;
     display: flex;
     flex-direction: column;
 
@@ -235,15 +235,18 @@
 }
 
 .aside{
-    position: absolute;
-    right: 250px;
-    width:25%;
+    
+    width:64%;
     font-family: "Roboto", sans-serif;
     padding-bottom: 40px;
 }
 
+.positioning{
+    position: sticky;
+    top: 100px;
+}
 #total-articles-area a{
-
+    
     text-decoration: none;
     
 }
@@ -253,7 +256,7 @@
     color: black;
 }
 .radius-backG a{
-
+    
     color: grey;
     background-color: #f2f2f2;
     padding: 5px 15px;
@@ -261,7 +264,7 @@
 }
 
 .article-img{
-
+    
     width: 70%;
     margin-left: 20px
 }
@@ -274,6 +277,7 @@
     
     
 }
+
 
 
 .profile-image1 img{
@@ -303,6 +307,12 @@
     position: absolute;
     right: 5px;
     bottom: -10px;
+    opacity: 0.5;
+}
+
+.bookmark:hover{
+
+    opacity: 1;
 }
 
 .description{

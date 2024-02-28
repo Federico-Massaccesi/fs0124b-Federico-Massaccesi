@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+
+$smallFont: 'font-size:0.8rem';
+
+$mediumFont:'font-size: 1rem';
+
+$largeFont:'font-size: 1.5rem';
+
+
+
+@mixin title-big{
+
+    color:darken($bg_hero,20);
+    font-size: 4.5rem;
+    font-weight: 900;
+}
+
+@mixin logo{
+    color:darken($bg_hero,20);
+    font-weight: 900;
+    
+}
+

@@ -1,0 +1,98 @@
+@import 'reset';
+@import 'animazioni';
+@import 'colori';
+@import 'bottoni';
+@import 'font';
+@import 'mixins';
+@import 'spaziature';
+
+body{
+    font-family:  "Roboto", sans-serif;
+}
+.logo{
+
+    @include logo;
+    
+}
+
+.sfondo{
+    background-color: $bg_hero;
+    padding: 50px 200px;
+}
+
+.header{
+
+    display: flex;
+    justify-content: space-between;
+    }
+
+a{
+@include links;
+
+}
+
+.nav{
+    display: flex;
+    width: 10%;
+    justify-content: space-between;
+    
+}
+
+.title-description{
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.title-description img{
+
+    width: 400px;
+    position: relative;
+    top: 150px;
+    right: 250px;
+    @include floating
+}
+.text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.text h1{
+    
+    @include title-big;
+    
+}
+
+.text p{
+    
+    @include links;
+    line-height: 2rem;
+}
+
+.buttons a{
+    
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.img-cont{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+
+}
+.img-cont img{
+    @include floating;
+    width: max-content;
+    height: 400px;
+}
+
+// @media screen and(max-width:1680){
+
+//     width: 30%;
+// }

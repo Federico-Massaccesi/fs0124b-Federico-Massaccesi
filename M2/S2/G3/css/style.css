@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.blue {
+  background-color: #0e6cff;
+}
+
+.yellow {
+  background-color: #ff8700;
+}
+
+.green {
+  background-color: #4caf50;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.logo {
+  color: #340866;
+  font-weight: 900;
+}
+
+.sfondo {
+  background-color: #640fc5;
+  padding: 50px 200px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: "font-size:0.8rem";
+}
+
+.nav {
+  display: flex;
+  width: 10%;
+  justify-content: space-between;
+}
+
+.title-description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-description img {
+  width: 400px;
+  position: relative;
+  top: 150px;
+  right: 250px;
+  border-radius: 7px;
+  box-shadow: 5px 6px 9px 1px rgba(0, 0, 0, 0.28);
+}
+
+.text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+
+.text h1 {
+  color: #340866;
+  font-size: 4.5rem;
+  font-weight: 900;
+}
+
+.text p {
+  text-decoration: none;
+  color: white;
+  font-size: "font-size:0.8rem";
+  line-height: 2rem;
+}
+
+.buttons a {
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.img-cont {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.img-cont img {
+  border-radius: 7px;
+  box-shadow: 5px 6px 9px 1px rgba(0, 0, 0, 0.28);
+  width: max-content;
+  height: 400px;
+}
+
+/*# sourceMappingURL=style.css.map */

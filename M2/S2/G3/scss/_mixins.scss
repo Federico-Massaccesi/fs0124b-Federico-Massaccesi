@@ -1,0 +1,13 @@
+@mixin links{
+
+    text-decoration: none;
+    color: white;
+    font-size: $smallFont;
+}
+
+@mixin floating{
+
+    border-radius: 7px;
+    box-shadow: 5px 6px 9px 1px rgba(0,0,0,0.28);
+
+}

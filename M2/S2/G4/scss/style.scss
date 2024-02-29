@@ -1,0 +1,30 @@
+
+@import'variabili';
+
+
+
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+.hero{
+    background-color: #7550fe;
+}
+
+.hero-img{
+
+    width: 100%;
+}
+
+.hero-p{
+
+    font-size: 0.9rem;
+}
+
+.btn-hero{
+    font-size: 0.8rem;
+}
+
+.cards{
+    background-color: #f5f4f8;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="background-personal profile text-white">
+      <img
+        class="logo-profilo"
+        src="./assets/netflix_logo.png"
+        alt="Logo Netflix"
+      />
+      <div class="edit-profile">
+        <p class="h1-pr">Edit Profile</p>
+        <div>
+          <div class="d-sm-flex ">
+            <div class="div-img me-4 ">
+              <img class="img-profile mb-4" src="./assets/avatar.png" alt="" />
+            </div>
+            <div class=" fs-5">
+              <input
+                class="input-name pe-auto"
+                type="text"
+                placeholder="Scrivi il tuo nome utente"
+              />
+
+              <p class="mt-3">Language:</p>
+
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle text-white border border-white rounded-0 mb-5"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  English
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">English</a></li>
+                  <li><a class="dropdown-item" href="#">Italiano</a></li>
+                  <li><a class="dropdown-item" href="#">Portugues</a></li>
+                  <li><a class="dropdown-item" href="#">Chinese</a></li>
+                  <li><a class="dropdown-item" href="#">French</a></li>
+                  <li><a class="dropdown-item" href="#">Spanish</a></li>
+                </ul>
+              </div>
+              <p>Maturity Settings:</p>
+              <button
+                class="btn text-white rounded-0 mb-5 maturity"
+                type="button"
+                
+              >
+                ALL MATURITY RATINGS
+              </button>
+
+              <p>Show file for all maturity ratings for this profile</p>
+              <button
+                class="btn text-white border border-white rounded-0 mt-4 mb-5 px-4"
+                type="button"
+              >
+                EDIT
+              </button>
+
+              <p>Autoplay Controls</p>
+              <div class="form-check form-check-inline mb-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="inlineCheckbox1"
+                  value="option1"
+                />
+                <label class="form-check-label" for="inlineCheckbox1">Autoplay next episode in a series on all devices.</label>
+              </div>
+              <div class="form-check form-check-inline mb-4">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="inlineCheckbox2"
+                  value="option1"
+                />
+                <label class="form-check-label" for="inlineCheckbox2">Autoplay next episode in a series on all devices.</label>
+              </div>
+            </div>
+          </div>
+          <div class="d-sm-flex text-center">
+            <button
+              class="fs-5 btn text-white border border-white rounded-0 mt-4 mb-3 m-4 px-5 "
+              type="button"
+            >
+              SAVE</button
+            ><button
+              class="fs-5 btn text-white border border-white rounded-0 mt-4 mb-3 m-4 px-4"
+              type="button"
+            >
+              CANCEL</button
+            ><button
+              class="fs-5 btn text-white border border-white rounded-0 mt-4 mb-3 m-4 px-4 "
+              type="button"
+            >
+              DELETE PROFILE
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

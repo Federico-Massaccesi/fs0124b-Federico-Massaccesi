@@ -109,21 +109,25 @@
             compare(){
 
                 if(listaAnimali.includes(this.nomeProprietario)){
-                    return console.log(true);
+                    return true;
                 }else{
-                    return console.log(false)
+                    return false
                 }
             }
             
             
         }
         
+        
+
+
+
         const aggiornaLista=function(){
             
             listaAnimali.forEach(el =>{
                 let li = document.createElement('li')
     
-                li.innerText= 'Nome animale: ' + el.nomeAnimale + 'Nome proprietario: ' + el.nomeProprietario
+                li.innerText= 'Nome animale: ' + el.nomeAnimale + ' Nome proprietario: ' + el.nomeProprietario
     
                 ul.appendChild(li)
                 

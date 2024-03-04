@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <form action="">
+        <input type="text" id="petName" placeholder="Nome dell'animale">
+        <input type="text" id="petOwner" placeholder="Nome del proprietario">
+        <label for="cars">Seleziona la specie di animale</label>
+        <select id="species">
+            <option value="Cane">Cane</option>
+            <option value="Cavallo">Cavallo</option>
+            <option value="Gatto">Gatto</option>
+        </select>
+        <select id="razza">
+            <option value="Labrador">Labrador</option>
+            <option value="Levriero">Levriero</option>
+            <option value="Pitone">Pitone</option>
+        </select>
+        <button type="submit" id="submit">Invia</button>
+    </form>
+
+    <ul id="ul"></ul>
+
+
+
+    <script>
+
+        class user{
+
+            constructor(_name,_surname,_age,_location){
+
+                this.firstName= _name;
+                this.lastName=_surname;
+                this.age=_age;
+                this.location= _location
+            }
+            compareAge(){
+    
+                if(user1.age > user2.age){
+                    console.log(user1.firstName + ' è più grande di ' + user2.firstName);
+                }else if(user1.age == user2.age){
+                    console.log(user1.firstName + ' ha la stessa età di ' + user2.firstName)
+                }else{
+                    console.log(user1.firstName + ' è più piccolo di ' + user2.firstName);
+                }
+            }
+        }
+
+        
+        let user1 = new user('Marco','Carta',38,'La Spezia')
+
+        let user2= new user('Giulio','Mengoni',35,'Verona')
+
+
+
+        console.log(user2.compareAge(user1));
+
+///////////////////////////////////////////////////////////////////////////////////
+
+        let petName= document.querySelector('#petName');
+
+        let petOwner = document.querySelector('#petOwner')
+
+        let selectRace = document.querySelector('#razza')
+        
+        let selectSpecies = document.querySelector('#species')
+
+        let button = document.querySelector('#submit')
+
+        let listaAnimali= []
+        
+        
+        let ul=document.querySelector('#ul')
+        
+        button.addEventListener('click',function(event) {
+            event.preventDefault()
+            
+            ul.innerHTML= ''
+            
+            let newPet= new animale(petName.value,petOwner.value,selectRace.value,selectSpecies.value)
+            
+            listaAnimali.push(newPet)
+            
+            aggiornaLista();
+            
+            console.log(listaAnimali);
+        })
+        
+        
+        class animale{
+
+            constructor(_petName,_petOwner,_selectRace,_selectSpecies){
+
+                this.nomeAnimale = _petName;
+                
+                this.nomeProprietario= _petOwner;
+                
+                this.specie= _selectRace;
+
+                this.razza= _selectSpecies
+            }
+            
+            compare(){
+
+                if(listaAnimali.includes(this.nomeProprietario)){
+                    return console.log(true);
+                }else{
+                    return console.log(false)
+                }
+            }
+            
+            
+        }
+        
+        const aggiornaLista=function(){
+            
+            listaAnimali.forEach(el =>{
+                let li = document.createElement('li')
+    
+                li.innerText= 'Nome animale: ' + el.nomeAnimale + 'Nome proprietario: ' + el.nomeProprietario
+    
+                ul.appendChild(li)
+                
+    
+    
+            })
+            
+        }
+
+    </script>
+</body>
+</html>

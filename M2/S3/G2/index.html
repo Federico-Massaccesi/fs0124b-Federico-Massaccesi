@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" id="text" placeholder="Scrivi il tuo nome" />
+      <button id="save">Salva nome</button>
+      <button id="delete">Elimina precedenti</button>
+    </form>
+    <p id="alreadySaved"></p>
+    
+    <div>
+        <p id="timerP"></p>
+    </div>
+    
+    <script>
+      let text = document.querySelector("#text");
+      
+      let save = document.querySelector("#save");
+      
+      let canc = document.querySelector("#delete");
+      
+      let alreadySaved = document.querySelector("#alreadySaved");
+      ////////////////////////////////////////////////////////////////////////
+
+      function saveName() {
+          let sName = localStorage.setItem("name", text.value);
+          
+          alreadySaved.innerText = text.value;
+        }
+        
+      function cancName() {
+          let cName = localStorage.removeItem("name");
+          
+          alreadySaved.innerText = "";
+        }
+        save.addEventListener("click", () => {
+            let name = text.value;
+            
+            event.preventDefault();
+            
+            saveName();
+        });
+    
+        canc.addEventListener("click", () => {
+        event.preventDefault();
+        
+        cancName();
+    });
+    
+    ////////////////////////////////////////////////////////////////////////
+    
+    let p = document.getElementById('timerP')
+    
+    let time = sessionStorage.getItem('timeSession')
+    
+    if(!time){
+
+            time =0;
+    }
+    
+    let interval = setInterval(function() {
+
+            time ++;
+        p.innerHTML= time;
+        
+        sessionStorage.setItem('timeSession',time)
+    },1000)
+
+       
+
+    </script>
+  </body>
+  </html>

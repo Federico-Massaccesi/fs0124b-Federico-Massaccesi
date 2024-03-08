@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettagli</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+    />
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary d-flex justify-content-between">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="./assets/Amazon_logo.svg"
+              alt="Bootstrap"
+              width="80"
+              height="24"
+            />
+          </a>
+          <a class="nav-link" href="./back-office.html">Back Office</a>
+        </div>
+      </nav>
+
+      <div class="totalContainer w-50">
+
+        <div class="d-flex justify-content-between">
+            <h1 class="title">Details</h1>
+            <a href="index.html" class="text-decoration-none">
+                <i class="bi bi-house-door me-2"></i>Go back</a>
+        </div>
+
+        <div id="appendCard"></div>
+          <template id="templateDetails">
+              
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="" class="img-fluid rounded-start h-100" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                        <p class="card-text" id="brand">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title" id="name">Card title</h5>
+                        <h5 class="card-title" id="price">Card title</h5>
+                      <p class="card-text" id="description"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+        </template>
+        
+    </div>
+
+
+    <script src="./js/details.js"></script>
+</body>
+</html>

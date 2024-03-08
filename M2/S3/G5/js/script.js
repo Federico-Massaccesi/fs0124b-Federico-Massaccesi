@@ -67,6 +67,10 @@ headers: {
 
         modifica.href= `edit.html?id=${el._id}`
         
+        let scopri= card.querySelector('#scopri')
+        
+        scopri.href= `showCard.html?id=${el._id}`
+
         
         let row = document.querySelector('.row')
         row.append(card)

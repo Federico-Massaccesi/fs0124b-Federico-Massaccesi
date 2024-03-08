@@ -65,27 +65,30 @@ let saveChanges= document.querySelector('#saveBtnEdit')
 saveChanges.addEventListener('click',function(e){
     e.preventDefault()
     
+        let nuovoDato={
+
+            name: namePr.value,
+            brand:brand.value,
+            price:price.value,
+            imageUrl:imageUrl.value,
+            description: description.value
+        }
+    
     fetch(`https://striveschool-api.herokuapp.com/api/product/${id}`, {
         method:'PUT',
     headers: {
         'Content-Type':'application/json',
         "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVhZDZkYzJkN2IxMTAwMTkwZTZkZDMiLCJpYXQiOjE3MDk4ODkyNDQsImV4cCI6MTcxMTA5ODg0NH0.cxOR-1uqpuky5b9rUqIREOTKcy2HG174YoDwJTxQUww"
     },
-    body:JSON.stringify()
+    body:JSON.stringify(nuovoDato)
     })
     .then(res=>res.json())
     .then(dato=> {
         
         console.log(dato);
-
-        // dato.name= namePr.value
-        // dato.brand=brand.value
-        // dato.price=price.value
-        // dato.imageUrl=imageUrl.value
-        // dato.description= description.value
         
         
-        // location.href= 'index.html'
+        location.href= 'index.html'
         
     })
 

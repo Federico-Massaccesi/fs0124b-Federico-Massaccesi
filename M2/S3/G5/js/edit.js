@@ -1,9 +1,11 @@
 
-    let namePr= document.querySelector('.inputName')
-    let brand= document.querySelector('.inputBrand')
-    let price= document.querySelector('.inputPrice')
-    let imageUrl= document.querySelector('.inputUrl')
-    let description= document.querySelector('.inputDescription')
+let namePr= document.querySelector('.inputName')
+let brand= document.querySelector('.inputBrand')
+let price= document.querySelector('.inputPrice')
+let imageUrl= document.querySelector('.inputUrl')
+let description= document.querySelector('.inputDescription')
+
+
 let url= new URLSearchParams(location.search)
 
 let id= url.get('id')
@@ -34,6 +36,8 @@ headers: {
 
 let deleteBtn= document.querySelector('#deleteBtn')
 
+
+
 deleteBtn.addEventListener('click',function(){
 
     fetch(`https://striveschool-api.herokuapp.com/api/product/${id}`, {
@@ -52,10 +56,22 @@ headers: {
 
 })
 
+let annullaElim= document.querySelector('#annullaEl')
+
+annullaElim.addEventListener('click',function(){
+
+    let modal= document.querySelector('#exampleModal')
+
+   
+
+})
+
 let reset = document.querySelector('#resetBtn')
 
 reset.addEventListener('click',function(){
     
+
+
     location.reload()
 
 })
@@ -93,3 +109,4 @@ saveChanges.addEventListener('click',function(e){
     })
 
 })
+

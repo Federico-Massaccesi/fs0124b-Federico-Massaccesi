@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit product</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+    />
+</head>
+<body>
+    
+
+    <nav class="navbar bg-body-tertiary d-flex justify-content-between">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./assets/Amazon_logo.svg"
+              alt="Bootstrap"
+              width="80"
+              height="24"
+            />
+          </a>
+        </div>
+      </nav>
+
+      <div class="totalContainer">
+
+        <h1 class="title">Edit product</h1>
+        <form action="">
+            <div class="input-group mb-3">
+              <span
+                class="input-group-text "
+                id="inputGroup-sizing-default"
+                >Nome</span
+              >
+              <input
+                type="text"
+                class="form-control inputName"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+                placeholder="Nome prodotto"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <span
+                class="input-group-text "
+                id="inputGroup-sizing-default"
+                >Brand</span
+              >
+              <input
+                type="text"
+                class="form-control inputBrand"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+                placeholder="Brand"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <span
+                class="input-group-text "
+                id="inputGroup-sizing-default"
+                >Prezzo</span
+              >
+              <input
+                type="number"
+                class="form-control inputPrice"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+                placeholder="Prezzo"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text " id="inputGroup-sizing-default"
+                >URL Immagine</span
+              >
+              <input
+                type="text"
+                class="form-control inputUrl"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+                placeholder="https://..."
+              />
+            </div>
+            <div class="input-group mb-3">
+              <span
+                class="input-group-text "
+                id="inputGroup-sizing-default"
+                >Descrizione</span
+              >
+              <input
+                type="text"
+                class="form-control inputDescription"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-danger me-3" id="deleteBtn">
+                    <i class="bi bi-trash3"></i>
+                  </button>
+              <div class="d-flex">
+                  <button type="button" class="btn btn-danger me-3" id="resetBtn">
+                      Reset
+                    </button>
+                    <button type="button" class="btn btn-warning" id="saveBtnEdit">
+                        Salva
+                    </button>
+                </div>
+
+
+            </div>
+          </form>
+      </div>
+
+
+    <script src="./js/edit.js"></script>
+</body>
+</html>

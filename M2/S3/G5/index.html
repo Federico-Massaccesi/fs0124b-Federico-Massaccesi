@@ -15,7 +15,7 @@
     />
   </head>
   <body>
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar bg-body-tertiary d-flex justify-content-between">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img
@@ -25,6 +25,7 @@
             height="24"
           />
         </a>
+        <a class="nav-link" href="./back-office.html">Back Office</a>
       </div>
     </nav>
 
@@ -32,14 +33,15 @@
       <div class="row row-cols-3"></div>
     </div>
 
-    <template>
+    <template id="template">
 
         <div class="card" style="width: 18rem;">
             <img src="" class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title"></h5>
               <p class="card-text"></p>
-              <a href="#" class="btn btn-primary"></a>
+              <a href="#" class="btn btn-primary" id="scopri">Scopri di più</a>
+              <a href="#" class="btn btn-warning" id="modifica">Modifica</a>
             </div>
           </div>
 

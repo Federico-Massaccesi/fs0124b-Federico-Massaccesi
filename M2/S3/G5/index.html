@@ -7,58 +7,52 @@
     <link
       rel="stylesheet"
       href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
-      />
-      <link rel="stylesheet" href="./css/style.css" />
-      <link
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
       rel="stylesheet"
       href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
-      />
-    </head>
-    <body>
-      
-      <div class="backdrop">
-
-        
-          <nav class="navbar d-flex justify-content-between">
-            <div class="container">
+    />
+  </head>
+  <body>
+    <div class="backdrop">
+      <nav class="navbar d-flex justify-content-between">
+        <div class="container">
           <a class="navbar-brand" href="#">
-          <img
-          src="./assets/amazon-logo.jpg"
-          alt="Bootstrap"
-          width="120"
-          height="60"
-          />
-        </a>
-        <a class="nav-link text-white" href="./back-office.html">Back Office</a>
+            <img
+              src="./assets/amazon-logo.jpg"
+              alt="Bootstrap"
+              width="120"
+              height="60"
+            />
+          </a>
+          <a class="nav-link text-white" href="./back-office.html"
+            >Back Office</a
+          >
+        </div>
+      </nav>
+
+      <div class="totalContainer">
+        <h1 class="title mb-5">Prodotti</h1>
+        <div class="row row-cols-3"></div>
       </div>
-    </nav>
-    
-    <div class="totalContainer">
-      <h1 class="title mb-5">Prodotti</h1>
-      <div class="row row-cols-3"></div>
-    </div>
-    
-    <template id="template">
-      
-      <div class="card" id="card">
-            <img src="" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <p class="card-text"></p>
-              <a href="#" class="btn btn-primary" id="scopri">Scopri di più</a>
-              <a href="#" class="btn btn-warning" id="modifica">Modifica</a>
-            </div>
+
+      <template id="template">
+        <div class="card" id="card">
+          <img src="" class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary" id="scopri">Scopri di più</a>
+            <a href="#" class="btn btn-warning" id="modifica">Modifica</a>
           </div>
-          
-        </template>
-        
-        
-      </div>
-        
-      <div class="loader"></div>
-        
-        <script src="./js/script.js"></script>
-        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-      </body>
-      </html>
-      
+        </div>
+      </template>
+    </div>
+
+    <div class="loader"></div>
+
+    <script src="./js/script.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

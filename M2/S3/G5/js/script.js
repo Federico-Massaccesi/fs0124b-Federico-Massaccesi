@@ -80,5 +80,12 @@ headers: {
     
 //////////////////////////////////////////////////////////////////
 
-    
+    let loader=document.querySelector('.loader')
 
+    let loading= document.querySelector('.backdrop')
+
+    setTimeout(()=>{
+
+        loader.classList.add('none')
+        loading.style.filter= 'none'
+    },'1000')

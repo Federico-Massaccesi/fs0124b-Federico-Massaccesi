@@ -40,10 +40,16 @@ class User implements sim{
         return this.credito
     }
 
+    getNumeroChiamate():number{
+
+        return this.numeroChiamate += 1
+    }
+
     azzeraChiamate():void{
 
         this.numeroChiamate = 0 
     }
+
 }
 
 let user1 = new User('Mario','Rossi') 

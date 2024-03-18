@@ -18,6 +18,9 @@ class User {
     chiama404() {
         return this.credito;
     }
+    getNumeroChiamate() {
+        return this.numeroChiamate += 1;
+    }
     azzeraChiamate() {
         this.numeroChiamate = 0;
     }

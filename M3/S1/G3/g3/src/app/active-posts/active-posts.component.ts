@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ServiceFetchService } from '../service-fetch.service';
+import { iInterface } from '../Models/iInterface';
 
 @Component({
   selector: 'app-active-posts',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class ActivePostsComponent {
 
+  active:iInterface[]= []
+
+  constructor(private postsSvc:ServiceFetchService){}
+
+  ngOnInit(){
+
+    this.postsSvc.getActivePosts()
+    .then(res => this.active = res)
+  }
 }

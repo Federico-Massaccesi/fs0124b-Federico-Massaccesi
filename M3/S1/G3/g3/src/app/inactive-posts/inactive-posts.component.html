@@ -1,1 +1,16 @@
-<p>inactive-posts works!</p>
+<div *ngFor="let pers of inactive" class="container">
+  <div class="row text-center justify-content-center mb-5">
+    <div class="col-12 card" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title">{{pers.title}}</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+        <p class="card-text">
+          {{pers.body}}
+        </p>
+        <p *ngFor="let tag of pers.tags" class="card-text">
+          {{tag}}
+        </p>
+
+      </div>
+    </div>
+  </div>

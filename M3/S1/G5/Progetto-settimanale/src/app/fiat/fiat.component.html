@@ -1,0 +1,26 @@
+<div class="container">
+<div class="row align-items-center">
+  <div class="col-2">
+    <img class="logo" [src]="allFiat[0].brandLogo" alt="Logo Fiat" />
+  </div>
+  <h1 class="col-6 title">Le nostre Fiat</h1>
+</div>
+<div class="row">
+  <div *ngFor="let auto of allFiat" class="col-6">
+    <div class="card">
+      <img [src]="auto.modelImage" class="card-img-top img-fluid" alt="..." />
+      <div class="card-body">
+        <p class="card-text">
+          {{auto.brand}} {{auto.model}} {{auto.year}}
+        </p>
+        <p class="card-text">
+          {{auto.price |currency: 'EUR'}}
+        </p>
+        <a [routerLink]="['/dettagli', auto.model]" class="btn btn-primary"
+            >Dettagli</a
+          >
+      </div>
+    </div>
+  </div>
+</div>
+</div>

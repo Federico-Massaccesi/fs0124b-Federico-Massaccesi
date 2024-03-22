@@ -1,0 +1,56 @@
+<!-- <div class="row justify-content-around">
+  <div
+  *ngFor="let logo of onlyBrand"
+  class="col-3 my-5 "
+    >
+      <div>
+        <img class="logo" src="{{ logo }}" alt="" />
+      </div>
+    </div>
+  </div> -->
+
+  <div class="container">
+    <h2>I nostri marchi</h2>
+    <h4>Clicca sul logo per vedere il catalogo completo</h4>
+<div class="row my-5 align-items-center">
+  <a class="col-3" routerLink="/Fiat">
+    <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/it/thumb/9/9e/Logo_della_Fiat.svg/2048px-Logo_della_Fiat.svg.png" alt="">
+  </a>
+  <a class="col-6" routerLink="/Ford">
+    <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Ford-Motor-Company-Logo.png" alt="">
+  </a>
+  <a class="col-2" routerLink="/Audi">
+    <img  src="https://thumbs.dreamstime.com/b/il-logo-audi-%C3%A8-un-illustrazione-di-sfondo-bianco-icona-vettoriale-icone-set-social-media-flat-banner-vectors-svg-eps-jpg-jpeg-210442284.jpg" alt="">
+  </a>
+</div>
+
+<h2 class="align-content-center mb-5">Auto in evidenza</h2>
+
+<div class="row justify-content-around">
+    <div *ngFor="let auto of autoEsposizioneHome" class="col-3">
+      <div
+        class="card"
+        [ngClass]="{
+          'bg-success': auto.available,
+          'bg-danger': !auto.available
+        }"
+      >
+        <img [src]="auto.modelImage" class="card-img-top" alt="Foto Modello" />
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ auto.brand }} {{ auto.model }} {{ auto.year }}
+          </h5>
+          <p class="card-text">
+            {{ auto.price | currency : "EUR" }}
+          </p>
+          <a routerLink="/{{ auto.brand }}" class="btn btn-warning me-4"
+            >Brand</a
+          >
+          <a [routerLink]="['/dettagli', auto.model]" class="btn btn-primary"
+            >Dettagli</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="container  my-3">
+<div class="card"[ngClass]="{
+  'bg-success': elementoSelezionato.available,
+  'bg-danger': !elementoSelezionato.available
+}">
+  <img [src]="elementoSelezionato.modelImage" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{elementoSelezionato.brand}} {{elementoSelezionato.model}} {{elementoSelezionato.year}}</h5>
+    <p class="card-text">{{elementoSelezionato.price | currency: 'EUR'}}</p>
+    <a href="#" class="btn btn-primary me-3">Acquista</a>
+    <a routerLink="/{{elementoSelezionato.brand}}" class="btn btn-primary">Brand</a>
+  </div>
+</div>
+</div>

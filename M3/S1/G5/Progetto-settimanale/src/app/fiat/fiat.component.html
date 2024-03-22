@@ -7,7 +7,10 @@
 </div>
 <div class="row">
   <div *ngFor="let auto of allFiat" class="col-6">
-    <div class="card">
+    <div class="card" [ngClass]="{
+      'bg-success': auto.available,
+      'bg-danger': !auto.available
+    }">
       <img [src]="auto.modelImage" class="card-img-top img-fluid" alt="..." />
       <div class="card-body">
         <p class="card-text">

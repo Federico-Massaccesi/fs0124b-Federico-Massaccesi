@@ -12,6 +12,7 @@ import { FiatComponent } from './fiat/fiat.component';
 import { AudiComponent } from './audi/audi.component';
 import { FordComponent } from './ford/ford.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,7 @@ import { FordComponent } from './ford/ford.component';
     ErrorComponent,
     FiatComponent,
     AudiComponent,
-    FordComponent
+    FordComponent,
   ],
   imports: [
     BrowserModule,

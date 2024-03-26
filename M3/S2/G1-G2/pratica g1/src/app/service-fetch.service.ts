@@ -250,6 +250,7 @@ candidati:iInterface[]= [
 ]
 fourPosts:iInterface[]= []
 
+
   getPosts():iInterface[]{
 
    return this.candidati
@@ -279,6 +280,36 @@ fourPosts:iInterface[]= []
       }
 
   }
+
+  getAllTags():string[]{
+
+    let arrAllTags: string[]= []
+
+
+    this.candidati.forEach(el => {
+
+      el.tags.forEach(element => {
+
+        if(!arrAllTags.includes(element))
+
+        arrAllTags.push(element)
+
+      });
+
+    });
+
+    return arrAllTags
+
+  }
+
+  postPerTag(tag:string):void{
+
+   console.log( this.candidati.filter(el => el.tags.includes(tag)))
+
+
+
+  }
+
 }
 
 

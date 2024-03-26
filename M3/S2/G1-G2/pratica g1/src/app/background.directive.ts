@@ -8,14 +8,13 @@ export class BackgroundDirective {
 
   constructor(private ref:ElementRef, private postSvc: ServiceFetchService) { }
 
-@Input() colori:string[]= ['red','yellow','blue','green']
+@Input() colori:string[]= ['grey','yellow','blue','green']
 
 ngOnInit(){
 
-  console.log(this.ref);
 
 
-  this.ref.nativeElement.style.backgroundColor = this.colori[this.postSvc.randomIndex(3)]
+  this.ref.nativeElement.style.backgroundColor = this.colori[this.postSvc.randomIndex(this.colori.length)]
 
 }
 

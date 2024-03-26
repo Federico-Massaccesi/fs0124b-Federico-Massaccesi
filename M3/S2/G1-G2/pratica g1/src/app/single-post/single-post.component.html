@@ -1,4 +1,12 @@
 <div class="container">
+
+  <div class="row justify-content-around">
+    <button class="col-1"
+     *ngFor="let item of arrAllTags"
+     (click)="postPerTag(item)"
+     >{{item}}</button>
+  </div>
+
   <div class="row">
     <div *ngFor="let pers of candidati" class="col-4">
       <div

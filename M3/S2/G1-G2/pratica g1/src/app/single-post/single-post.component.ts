@@ -11,11 +11,16 @@ export class SinglePostComponent {
 
   candidati: iInterface[] = [];
 
+  arrAllTags: string[]= []
+
   constructor(private postsSvc:ServiceFetchService){}
     ngOnInit(){
 
       this.candidati =  this.postsSvc.getPosts()
 
+      this.arrAllTags= this.postsSvc.getAllTags()
+
+      this.postsSvc.postPerTag(item:string)
     }
 
 

@@ -256,8 +256,8 @@ fourPosts:iInterface[]= []
 
   }
 
-  randomIndex(): number {
-    let randomNumber: number = Math.floor(Math.random() * 30);
+  randomIndex(n:number): number {
+    let randomNumber: number = Math.floor(Math.random() * n);
     return randomNumber;
   }
 
@@ -274,7 +274,7 @@ fourPosts:iInterface[]= []
 
    genera() {
       for (let x = 0; x < 4; x++) {
-        this.fourPosts.push(this.candidati[this.randomIndex()]);
+        this.fourPosts.push(this.candidati[this.randomIndex(30)]);
 
       }
 

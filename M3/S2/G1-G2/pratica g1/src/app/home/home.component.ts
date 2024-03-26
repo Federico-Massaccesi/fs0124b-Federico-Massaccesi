@@ -15,10 +15,10 @@ export class HomeComponent {
   ngOnInit() {
     this.candidati = this.postsSvc.getPosts();
 
-    this.postsSvc.randomIndex();
+    this.postsSvc.randomIndex(this.candidati.length);
 
     for (let x = 0; x < 4; x++) {
-      this.fourPosts.push(this.candidati[this.postsSvc.randomIndex()]);
+      this.fourPosts.push(this.candidati[this.postsSvc.randomIndex(this.candidati.length)]);
     }
   }
 }

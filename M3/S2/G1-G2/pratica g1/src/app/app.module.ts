@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { SinglePostComponent } from './single-post/single-post.component';
 import { FormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
+import { UpperPipe } from './upper.pipe';
+import { BackgroundDirective } from './background.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { FormComponent } from './form/form.component';
     NavbarComponent,
     HomeComponent,
     SinglePostComponent,
-    FormComponent
+    FormComponent,
+    UpperPipe,
+    BackgroundDirective
   ],
   imports: [
     BrowserModule,

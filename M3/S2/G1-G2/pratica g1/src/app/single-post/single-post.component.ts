@@ -20,7 +20,7 @@ export class SinglePostComponent {
 
       this.arrAllTags= this.postsSvc.getAllTags()
 
-      this.postsSvc.postPerTag(item:string)
+      // this.postsSvc.postPerTag(item:string)
     }
 
 

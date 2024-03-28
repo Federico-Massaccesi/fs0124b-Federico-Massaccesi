@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { iPosts } from './Models/posts';
-import { Observable, Subject, tap } from 'rxjs';
+import { BehaviorSubject, Observable, Subject, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class PostsService {
 
   picsArr:iPosts[]= []
 
-  postsSubject = new Subject<iPosts[]>();
+  postsSubject = new BehaviorSubject<iPosts[]>([]);
 
   $posts= this.postsSubject.asObservable()
 
@@ -21,6 +21,8 @@ export class PostsService {
     this.getAll().subscribe(data=>{
 
       this.postsSubject.next(data)
+
+      this.picsArr = data
     })
    }
 

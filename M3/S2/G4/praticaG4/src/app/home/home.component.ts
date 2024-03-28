@@ -40,6 +40,13 @@ like(id:number){
    this.likedPosts.push(likedPost)
 
 
+  }else if(likedPost != undefined && this.likedPosts.includes(likedPost)){
+
+    let index = this.likedPosts.findIndex(p=> p == likedPost)
+
+    this.likedPosts.splice(index,1)
+
+
   }
 
 

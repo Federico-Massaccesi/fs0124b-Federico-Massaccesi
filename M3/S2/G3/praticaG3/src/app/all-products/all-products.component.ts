@@ -25,10 +25,7 @@ export class AllProductsComponent {
 
       console.log(this.prodSvs.$product);
 
-      addFavorite(this.prod){
 
-        this.prodSvs.add(this.prod)
-      }
 
 
     })
@@ -38,7 +35,5 @@ export class AllProductsComponent {
 
   }
 }
-function addFavorite(prod: iProducts) {
 
-}
 

@@ -6,11 +6,16 @@
   }"
  >
 
-  <input id="checkbox" class="col-1" type="checkbox">
-  <p id="todoText" class="col-11"
-  [ngClass]="{
-    'text-white': item.completed,
-    'text-dark': !item.completed
-  }"
+  <input [(ngModel)]="item.completed" id="checkbox" class="col-1" type="checkbox">
+  <div class="col-11">
+
+    <p id="todoText"
+    [ngClass]="{
+      'text-white': item.completed,
+      'text-dark': !item.completed
+    }"
   >{{item.todo}} </p>
+    <p>{{findUser(item.userId)}}</p>
+</div>
+
 </div>

@@ -16,8 +16,6 @@ export class AllListComponent {
   userArr:iUsers[]=[]
 
 
-
-
 constructor(private todoSvc:TodoService, private userSvc:UsersService){}
 
 ngOnInit(){
@@ -26,6 +24,8 @@ ngOnInit(){
   this.todoArr = this.todoSvc.todos
 
   this.userArr = this.userSvc.user
+
+
 
 
 
@@ -39,5 +39,7 @@ findUser(userId:number):string | undefined{
 
 
 }
+
+
 
 }

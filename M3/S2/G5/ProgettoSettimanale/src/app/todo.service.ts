@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { iTodo } from './Models/todo';
 import { iUsers } from './Models/users';
+import { UsersService } from './users.service';
 
 @Injectable({
   providedIn: 'root'
@@ -910,6 +911,8 @@ export class TodoService {
     }
   ]
 
+
+
   getCompleted(){
 
     return this.todos.filter(p=> p.completed)
@@ -930,5 +933,6 @@ export class TodoService {
     });
 
   }
+
 
 }

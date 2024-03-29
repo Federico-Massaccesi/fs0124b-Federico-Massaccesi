@@ -8,6 +8,8 @@ import { AllListComponent } from './all-list/all-list.component';
 import { CompletedComponent } from './completed/completed.component';
 import { UncompletedComponent } from './uncompleted/uncompleted.component';
 import { ByUserComponent } from './by-user/by-user.component';
+import { FormsModule } from '@angular/forms';
+import { SingleUserComponent } from './single-user/single-user.component';
 
 
 @NgModule({
@@ -17,11 +19,13 @@ import { ByUserComponent } from './by-user/by-user.component';
     AllListComponent,
     CompletedComponent,
     UncompletedComponent,
-    ByUserComponent
+    ByUserComponent,
+    SingleUserComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

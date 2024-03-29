@@ -2,9 +2,11 @@
 
 <div class="row mb-4">
 
-  <a class="col-2 mx-2 btn btn-primary " routerLink="/completed">Vediamo cosa abbiamo già fatto </a>
-  <a class="col-2 mx-2 btn btn-primary " routerLink="/uncompleted">Vediamo come ci manca da fare</a>
-  <a class="col-2 mx-2 btn btn-primary " routerLink="/byUser">Vediamo le task di ogni persona</a>
   <a class="col-2 mx-2 btn btn-primary " routerLink="/">Tutte le task</a>
+  <a class="col-2 mx-2 btn btn-primary " routerLink="/completed">Cosa abbiamo già fatto </a>
+  <a class="col-2 mx-2 btn btn-primary " routerLink="/uncompleted">Cosa ci manca da fare</a>
+  <a class="col-2 mx-2 btn btn-primary " routerLink="/byUser">Le task di ogni persona</a>
+  <input type="text" placeholder="Cerca User" class="col-2 rounded" #findUser>
+  <a  [routerLink]="['/singleUser',findUser.value]"  class="col-1 btn btn-primary" (click)="findUserName(findUser.value)">Cerca</a>
 
 </div>

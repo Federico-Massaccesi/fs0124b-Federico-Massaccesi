@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { UsersService } from '../users.service';
 import { iUsers } from '../Models/users';
+import { iTodo } from '../Models/todo';
+import { TodoService } from '../todo.service';
 
 @Component({
   selector: 'app-single-user',
@@ -10,6 +12,10 @@ import { iUsers } from '../Models/users';
 export class SingleUserComponent {
 
   singleUser!:iUsers|undefined
+
+
+
+  todoArr:iTodo[]=[]
 
 nomeRicevuto!:string
 
@@ -22,25 +28,37 @@ onUserName(data:string){
   this.nomeRicevuto = data
 }
 
-constructor(private userSvc: UsersService){}
+constructor(private userSvc: UsersService,private todoSvc:TodoService){}
 
 ngOnInit(){
 
-  console.log(this.nomeRicevuto);
+this.todoArr = this.todoSvc.todos
 
-  this.singleUser = this.userSvc.user.find(p=> p.firstName == this.nomeRicevuto)
+  let found = this.userSvc.user.find(p=> p.firstName == this.nomeRicevuto)
 
-  if(this.singleUser == undefined){
+  if(found == undefined){
 
     this.foundOrNot = true
 
   }else{
 
-    console.log(this);
+    this.singleUser = found
 
     this.foundOrNot= false
 
   }
+
+}
+
+//C'HO PROVATO
+
+getTDofUser(id:number){
+
+
+
+  let ownTodo:iTodo[] =this.todoArr.filter(el=> el.userId == id)
+
+ return ownTodo
 
 }
 

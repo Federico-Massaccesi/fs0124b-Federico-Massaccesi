@@ -2,14 +2,14 @@
   <div class="card mb-3">
     <div class="row g-0">
       <div class="col-md-4">
-        <img [src]="item.image" class="rounded-start" alt="..." />
+        <img [src]="singleUser?.image" class="rounded-start" alt="..." />
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">{{ item.firstName }} {{ item.lastName }}</h5>
+          <h5 class="card-title">{{singleUser?.firstName}} {{singleUser?.lastName}}</h5>
           <div
             id="row"
-            *ngFor="let item of getTDofUser(item.id)"
+            *ngFor="let item of getTDofUser(singleUser?.id)"
             class="row my-2"
             [ngClass]="{
               'bg-warning': !item.completed,
@@ -39,6 +39,8 @@
     </div>
   </div>
 </div> -->
+
+<!--C'HO PROVATO-->
 
 <div *ngIf="foundOrNot">
   Non è stato trovato nessun User con il nome cercato

@@ -1,0 +1,37 @@
+<div *ngFor="let item of userArr">
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="item.image" class="img-fluid rounded-start" alt="..." />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.firstName }} {{ item.lastName }}</h5>
+          <div
+            id="row"
+            *ngFor="let item of getTDofUser(item.id)"
+            class="row my-2"
+            [ngClass]="{
+              'bg-warning': !item.completed,
+              'bg-success': item.completed
+            }"
+          >
+            <input id="checkbox" class="col-1" type="checkbox" />
+            <div class="col-11">
+              <p
+                id="todoText"
+                [ngClass]="{
+                  'text-white': item.completed,
+                  'text-dark': !item.completed
+                }"
+              >
+                {{ item.todo }}
+              </p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

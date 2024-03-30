@@ -10,10 +10,11 @@ import { TodoService } from '../todo.service';
   styleUrl: './single-user.component.scss'
 })
 export class SingleUserComponent {
+  //C'HO PROVATO
 
-  singleUser!:iUsers|undefined
+  singleUser!:iUsers
 
-
+  userArr:iUsers[]= []
 
   todoArr:iTodo[]=[]
 
@@ -22,8 +23,6 @@ nomeRicevuto!:string
 foundOrNot!:boolean
 
 onUserName(data:string){
-
-
 
   this.nomeRicevuto = data
 }
@@ -34,27 +33,35 @@ ngOnInit(){
 
 this.todoArr = this.todoSvc.todos
 
-  let found = this.userSvc.user.find(p=> p.firstName == this.nomeRicevuto)
+this.userArr = this.userSvc.user
 
-  if(found == undefined){
+if(this.nomeRicevuto == undefined){
 
-    this.foundOrNot = true
+  this.foundOrNot = true
+}else{
 
-  }else{
+  // this.singleUser = this.getUser()
 
-    this.singleUser = found
-
-    this.foundOrNot= false
-
-  }
+  this.foundOrNot= false
+}
 
 }
 
-//C'HO PROVATO
+getUser(){
+
+  let found = this.userArr.find(p=> p.firstName == this.nomeRicevuto)
+
+if(found){
+
+  return found
+}else{
+  return
+}
+
+}
+
 
 getTDofUser(id:number){
-
-
 
   let ownTodo:iTodo[] =this.todoArr.filter(el=> el.userId == id)
 

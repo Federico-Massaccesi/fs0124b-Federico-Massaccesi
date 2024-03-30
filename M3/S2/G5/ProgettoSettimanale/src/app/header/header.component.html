@@ -6,7 +6,7 @@
   <a class="col-2 mx-2 btn btn-primary " routerLink="/completed">Cosa abbiamo già fatto </a>
   <a class="col-2 mx-2 btn btn-primary " routerLink="/uncompleted">Cosa ci manca da fare</a>
   <a class="col-2 mx-2 btn btn-primary " routerLink="/byUser">Le task di ogni persona</a>
-  <input type="text" placeholder="Cerca User" class="col-2 rounded" #findUser>
-  <a  [routerLink]="['/singleUser',findUser.value]"  class="col-1 btn btn-primary" (click)="findUserName(findUser.value)">Cerca</a>
+  <input type="text" placeholder="Cerca User" class="col-2 rounded" #findUserInput>
+  <a  [routerLink]="['/singleUser',findUserInput.value]"  class="col-1 btn btn-primary" (click)="findUserName(findUserInput.value)">Cerca</a>
 
 </div>

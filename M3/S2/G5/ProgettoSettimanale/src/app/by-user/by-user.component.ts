@@ -28,8 +28,6 @@ export class ByUserComponent {
   }
   getTDofUser(id:number){
 
-    this.todoOfUser=[]
-
     let ownTodo:iTodo[] =this.todoArr.filter(el=> el.userId == id)
 
    return ownTodo

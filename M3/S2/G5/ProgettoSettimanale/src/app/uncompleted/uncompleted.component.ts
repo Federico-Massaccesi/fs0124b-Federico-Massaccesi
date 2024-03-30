@@ -21,14 +21,19 @@ export class UncompletedComponent {
 
   this.uncompletedArr = this.todoSvc.getUncompleted()
 
+  this.userArr= this.userSvc.user
+
   }
 
-  findUser(userId:number):string | undefined{
+  findUserName(userId:number){
 
-    let user:iUsers | undefined= this.userArr.find(el => {el.id == userId})
+    let user:iUsers|undefined= this.userArr.find(el => el.id == userId)
 
-    return user?.firstName
+    if(user){
 
-
+      return user.firstName + ' ' + user.lastName
+    }else{
+      return
+    }
   }
 }

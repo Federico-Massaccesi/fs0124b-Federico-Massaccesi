@@ -21,15 +21,20 @@ export class CompletedComponent {
 
   this.completedArr = this.todoSvc.getCompleted()
 
-  }
-
-  findUser(userId:number):string | undefined{
-
-    let user:iUsers | undefined= this.userArr.find(el => {el.id == userId})
-
-    return user?.firstName
-
+  this.userArr = this.userSvc.user
 
   }
 
+  findUserName(userId:number){
+
+    let user:iUsers|undefined= this.userArr.find(el => el.id == userId)
+
+    if(user){
+
+      return user.firstName + ' ' + user.lastName
+    }else{
+      return
+    }
+  }
 }
+

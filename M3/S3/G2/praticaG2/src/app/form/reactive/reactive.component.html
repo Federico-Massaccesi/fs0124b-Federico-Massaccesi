@@ -1,0 +1,19 @@
+<form [formGroup]="dati">
+
+  <input type="text" formControlName="nome" class="form-control" placeholder="Nome">
+  <input type="text" formControlName="cognome" class="form-control" placeholder="Cognome">
+  <input type="password" formControlName="password" class="form-control" placeholder="Password">
+  <input type="password" formControlName="confermaPassword" class="form-control" placeholder="Conferma la tua password">
+  <label for="genre">Il tuo genere:</label>
+    <select formControlName="genre" name="genre" id="genre">
+    <option value="uomo">uomo</option>
+    <option value="donna">donna</option>
+    <option value="altro">altro</option>
+  </select>
+  <hr>
+  <input type="file" formControlName="imgProfile" placeholder="Immagine del profilo">
+
+<textarea formControlName="bio" placeholder="La tua biografia"></textarea>
+
+<input type="text" formControlName="username" placeholder="Username">
+</form>

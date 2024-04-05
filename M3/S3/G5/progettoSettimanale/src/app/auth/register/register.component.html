@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Registrati per accedere a tutti i contenuti!</h1>
+
+  <h3>Compila tutti i campi qua sotto per accedere</h3>
+
+  <form>
+    <input type="text" name="nome" [(ngModel)]="newUser.nome" class="me-3" placeholder="Nome" />
+    <input type="text" name="cognome" [(ngModel)]="newUser.cognome" placeholder="Cognome" />
+
+    <div class="mt-4">
+      <input type="email" name="email" [(ngModel)]="newUser.email" class="me-3" placeholder="Email" />
+      <input type="password" name="password" [(ngModel)]="newUser.password" placeholder="Password" />
+    </div>
+
+    <button (click)="mandaDati()" class="btn btn-warning mt-4">Invia i dati e accedi al tuo nuovo account</button>
+  </form>
+</div>

@@ -1,0 +1,103 @@
+{
+  "users": [
+    {
+      "email": "qaniny@mailinator.com",
+      "password": "$2a$10$jEqE8EBo8.OgooPLPaaHSO3HoUb6y0mOWunGdVfb5rV75cAdBmP8G",
+      "nome": "In hic commodo illum",
+      "cognome": "Error nihil id quia",
+      "id": 1
+    },
+    {
+      "email": "fede@gmail.com",
+      "password": "$2a$10$pHPnEXLlomMr7OHPPLNJ5uyqqruZJBtqOpBWDhxjOqAfynYCHSM9e",
+      "nome": "Federico",
+      "cognome": "Massaccesi",
+      "id": 2
+    },
+    {
+      "email": "kuvado@mailinator.com",
+      "password": "$2a$10$hN3q.Mu.dvvAZm8V9g61z.CLqesd0Ikppc7hm99ULsvTYwoNGB8iK",
+      "nome": "Mollit architecto co",
+      "cognome": "Ipsum sed consectet",
+      "id": 3
+    }
+  ],
+  "popularMovies": [
+    {
+      "nome": "Il Padrino",
+      "anno": 1972,
+      "categoria": "Crime/Drama"
+    },
+    {
+      "nome": "Forrest Gump",
+      "anno": 1994,
+      "categoria": "Drama/Romance"
+    },
+    {
+      "nome": "Il Signore degli Anelli: Il Ritorno del Re",
+      "anno": 2003,
+      "categoria": "Adventure/Fantasy"
+    },
+    {
+      "nome": "Schindler's List",
+      "anno": 1993,
+      "categoria": "Biography/Drama/History"
+    },
+    {
+      "nome": "Pulp Fiction",
+      "anno": 1994,
+      "categoria": "Crime/Drama"
+    },
+    {
+      "nome": "Il Buono, il Brutto, il Cattivo",
+      "anno": 1966,
+      "categoria": "Western"
+    },
+    {
+      "nome": "La vita è bella",
+      "anno": 1997,
+      "categoria": "Comedy/Drama/War"
+    },
+    {
+      "nome": "Fight Club",
+      "anno": 1999,
+      "categoria": "Drama"
+    },
+    {
+      "nome": "Inception",
+      "anno": 2010,
+      "categoria": "Action/Adventure/Sci-Fi"
+    },
+    {
+      "nome": "Il Gladiatore",
+      "anno": 2000,
+      "categoria": "Action/Adventure/Drama"
+    },
+    {
+      "nome": "Interstellar",
+      "anno": 2014,
+      "categoria": "Adventure/Drama/Sci-Fi"
+    },
+    {
+      "nome": "The Dark Knight",
+      "anno": 2008,
+      "categoria": "Action/Crime/Drama"
+    },
+    {
+      "nome": "Matrix",
+      "anno": 1999,
+      "categoria": "Action/Sci-Fi"
+    },
+    {
+      "nome": "Il Padrino: Parte II",
+      "anno": 1974,
+      "categoria": "Crime/Drama"
+    },
+    {
+      "nome": "Shawshank Redemption",
+      "anno": 1994,
+      "categoria": "Drama"
+    }
+  ],
+  "favorites": []
+}

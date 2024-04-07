@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { iLoginData } from '../../Models/i-user';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,8 +10,27 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
-  email!:string
+  loginData:Partial<iLoginData> = {}
 
-  password!:string
+  constructor(
+    private authSvc:AuthService,
+    private router:Router
+  ){}
+
+  ngOnInit(){
+
+    this.authSvc.isLoggedIn = this.authSvc.getAccessToken()
+
+  }
+
+  signIn(){
+
+    this.authSvc.login(this.loginData)
+    .subscribe(data=>{
+
+      this.router.navigate(['/'])
+    })
+
+  }
 
 }

@@ -1,1 +1,26 @@
-<p>profile works!</p>
+<div class="container">
+
+  <h1>Il tuo profilo utente</h1>
+
+  <h2>Bentornato {{user.nome}} {{user.cognome}}</h2>
+
+  <h2>Ecco la tua lista di film preferiti</h2>
+<div class="row">
+
+  <div *ngFor="let item of favoritesArr" class="col-4">
+
+    <div class="card">
+      <img src="https://static.sky.it/images/skytg24/it/spettacolo/cinema/2021/12/14/scream-poster/scream-locandina-lassassino-e-nel-poster.jpg.transform/original/bc229803b9feedf61c0873a7f4fa1354c77eaa83/img.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{item.nome}}</h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Anno di uscita: {{item.anno}}</li>
+        <li class="list-group-item">Categoria: {{item.categoria}}</li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+</div>

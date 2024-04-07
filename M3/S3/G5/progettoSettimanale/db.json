@@ -20,6 +20,20 @@
       "nome": "Mollit architecto co",
       "cognome": "Ipsum sed consectet",
       "id": 3
+    },
+    {
+      "email": "fede26@gmail.com",
+      "password": "$2a$10$3YpWbboPsoZ0O65cD2.CkeDrgEVq1YTTq1ivLV5hwBO/ZiNzWBW8m",
+      "nome": "Federico",
+      "cognome": "Massaccesi",
+      "id": 4
+    },
+    {
+      "email": "rofimytaj@mailinator.com",
+      "password": "$2a$10$Z9r79fpNswEBFy6/klCoou2./t7S8wynIwQ4PtDj4qzGrWwy/cepO",
+      "nome": "Odit sit voluptatum ",
+      "cognome": "Fugiat facere quia ",
+      "id": 5
     }
   ],
   "popularMovies": [
@@ -99,5 +113,18 @@
       "categoria": "Drama"
     }
   ],
-  "favorites": []
+  "favorites": [
+    {
+      "nome": "Forrest Gump",
+      "anno": 1994,
+      "categoria": "Drama/Romance",
+      "id": 1
+    },
+    {
+      "nome": "Il Buono, il Brutto, il Cattivo",
+      "anno": 1966,
+      "categoria": "Western",
+      "id": 2
+    }
+  ]
 }

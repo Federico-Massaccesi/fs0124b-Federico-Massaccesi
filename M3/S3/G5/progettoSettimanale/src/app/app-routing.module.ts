@@ -1,14 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LogGuard } from './log.guard';
 
 const routes: Routes = [
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
-  {
-    path:'logged',
-    loadChildren:() => import('./logged/logged.module').then((m) => m.LoggedModule)
+  { path: 'logged/users',
+   loadChildren: () => import('./logged/users/users.module').then(m => m.UsersModule),
+    canActivate:[LogGuard],
+    canActivateChild:[LogGuard]
+  },
+  { path: '',
+   loadChildren: () => import('./logged/movies/movies.module').then(m => m.MoviesModule)},
+  { path: 'logged/profile',
+   loadChildren: () => import('./logged/profile/profile.module').then(m => m.ProfileModule),
+   canActivate:[LogGuard],
+    canActivateChild:[LogGuard]
   }
 ];
 

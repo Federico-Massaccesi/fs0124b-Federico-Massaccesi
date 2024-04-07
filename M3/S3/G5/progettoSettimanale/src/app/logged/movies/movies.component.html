@@ -1,10 +1,11 @@
 <div class="container text-center">
 
-  <h1 *ngIf="!loggedOrNot"><a routerLink="/auth/login" class="text-decoration-none">Accedi</a> per ottenere tutti i tuoi film preferiti</h1>
+  <h1>BENVENUTO IN FLETNIX</h1>
+  <h1 *ngIf="!loggedOrNot"><a routerLink="/auth/login" class="text-decoration-none">Accedi</a> o <a routerLink="/auth/register"  class="text-decoration-none">registrati</a> per ottenere tutti i tuoi film preferiti</h1>
 
 
 
-  <h1 *ngIf="loggedOrNot">Tutti i film </h1>
+  <h1 *ngIf="loggedOrNot">Catalogo film </h1>
 
 <div class="row" *ngIf="loggedOrNot">
 <div *ngFor="let item of moviesArr" class="col-4">

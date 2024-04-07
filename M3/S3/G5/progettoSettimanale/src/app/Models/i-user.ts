@@ -4,7 +4,7 @@ export interface iUser {
   cognome:string,
   email:string,
   password?:string
-
+  id:number
 }
 
 export interface iLoginData{

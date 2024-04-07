@@ -12,7 +12,7 @@ const routes: Routes = [
     canActivate:[LogGuard],
     canActivateChild:[LogGuard]
   },
-  { path: 'logged/movies',
+  { path: '',
    loadChildren: () => import('./logged/movies/movies.module').then(m => m.MoviesModule)},
   { path: 'logged/profile',
    loadChildren: () => import('./logged/profile/profile.module').then(m => m.ProfileModule),

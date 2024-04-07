@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { BehaviorSubject, Observable, Subject, map, tap } from 'rxjs';
+import { SpawnService } from '../logged/spawn.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,8 @@ export class AuthService {
 
   constructor(
     private http:HttpClient,
-    private router:Router
+    private router:Router,
+    private spawnSvc:SpawnService
   ) {
 
     this.restoreUser()
@@ -32,6 +34,7 @@ export class AuthService {
   loginUrl:string = 'http://localhost:3000/login'
 
   register(newUser:Partial<iUser>){
+
 
      return this.http.post(this.registerUrl,newUser)
   }

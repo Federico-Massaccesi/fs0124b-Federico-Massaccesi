@@ -30,11 +30,24 @@ export class ProfileComponent {
 
    }
 
-   this.spawnSvc.getFavorites().subscribe(data=>{
+  //  this.spawnSvc.getFavorites().subscribe(data=>{
+
+  //   this.favoritesArr = data.filter(el=>{
+
+  //     el.userId.includes(this.user.id)
+
+  //   })
+
+    //stavo provando a prendere solo i film messi tra i preferiti dallo specifico utente
+    //collegandomi con la funzione nel modulo movies ma niente. se riesci a spiegarmelo
+    //e lasciarmelo negli annotamenti quando metti il voto ti ringrazio tanto.
+
+  //  })
+
+  this.spawnSvc.getFavorites().subscribe(data=>{
 
     this.favoritesArr = data
-
-   })
+  })
 
   }
 

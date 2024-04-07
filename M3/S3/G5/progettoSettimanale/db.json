@@ -48,6 +48,13 @@
       "nome": "mario",
       "cognome": "varano",
       "id": 7
+    },
+    {
+      "email": "mariomari@mario.mar",
+      "password": "$2a$10$Gk./679qMbucW9Kegj84nuWf4OdqhU1Gw7MMwXci2vWpSP93Eemca",
+      "nome": "mario",
+      "cognome": "mari",
+      "id": 8
     }
   ],
   "popularMovies": [
@@ -139,6 +146,133 @@
       "anno": 1966,
       "categoria": "Western",
       "id": 2
+    },
+    {
+      "nome": "Forrest Gump",
+      "anno": 1994,
+      "categoria": "Drama/Romance",
+      "userId": 7,
+      "id": 3
+    },
+    {
+      "nome": "Il Signore degli Anelli: Il Ritorno del Re",
+      "anno": 2003,
+      "categoria": "Adventure/Fantasy",
+      "userId": 7,
+      "id": 4
+    },
+    {
+      "nome": "Il Signore degli Anelli: Il Ritorno del Re",
+      "anno": 2003,
+      "categoria": "Adventure/Fantasy",
+      "userId": 7,
+      "id": 5
+    },
+    {
+      "nome": "Il Signore degli Anelli: Il Ritorno del Re",
+      "anno": 2003,
+      "categoria": "Adventure/Fantasy",
+      "userId": 4,
+      "id": 6
+    },
+    {
+      "nome": "Il Padrino",
+      "anno": 1972,
+      "categoria": "Crime/Drama",
+      "userId": [
+        4
+      ],
+      "id": 7
+    },
+    {
+      "nome": "Forrest Gump",
+      "anno": 1994,
+      "categoria": "Drama/Romance",
+      "userId": [
+        4
+      ],
+      "id": 8
+    },
+    {
+      "nome": "Il Signore degli Anelli: Il Ritorno del Re",
+      "anno": 2003,
+      "categoria": "Adventure/Fantasy",
+      "userId": [
+        4
+      ],
+      "id": 9
+    },
+    {
+      "nome": "Inception",
+      "anno": 2010,
+      "categoria": "Action/Adventure/Sci-Fi",
+      "userId": [
+        4
+      ],
+      "id": 10
+    },
+    {
+      "nome": "Inception",
+      "anno": 2010,
+      "categoria": "Action/Adventure/Sci-Fi",
+      "userId": [
+        7
+      ],
+      "id": 11
+    },
+    {
+      "nome": "Inception",
+      "anno": 2010,
+      "categoria": "Action/Adventure/Sci-Fi",
+      "userId": [
+        7
+      ],
+      "id": 12
+    },
+    {
+      "nome": "Inception",
+      "anno": 2010,
+      "categoria": "Action/Adventure/Sci-Fi",
+      "userId": [
+        4
+      ],
+      "id": 13
+    },
+    {
+      "nome": "Inception",
+      "anno": 2010,
+      "categoria": "Action/Adventure/Sci-Fi",
+      "userId": [
+        4
+      ],
+      "id": 14
+    },
+    {
+      "nome": "Il Padrino",
+      "anno": 1972,
+      "categoria": "Crime/Drama",
+      "userId": [
+        4
+      ],
+      "id": 15
+    },
+    {
+      "nome": "Forrest Gump",
+      "anno": 1994,
+      "categoria": "Drama/Romance",
+      "userId": [
+        4
+      ],
+      "id": 16
+    },
+    {
+      "nome": "Forrest Gump",
+      "anno": 1994,
+      "categoria": "Drama/Romance",
+      "userId": [
+        4
+      ],
+      "id": 17
     }
   ]
 }

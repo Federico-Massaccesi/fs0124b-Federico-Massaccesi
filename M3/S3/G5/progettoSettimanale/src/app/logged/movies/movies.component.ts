@@ -3,6 +3,7 @@ import { AuthService } from '../../auth/auth.service';
 import { Router } from '@angular/router';
 import { iMovies } from '../../Models/movie';
 import { SpawnService } from '../spawn.service';
+import { iUser } from '../../Models/i-user';
 
 @Component({
   selector: 'app-movies',
@@ -20,6 +21,9 @@ export class MoviesComponent {
 
   moviesArr:iMovies[] =[]
 
+  user!:iUser
+
+
   ngOnInit(){
 
    this.loggedOrNot =  this.authSvc.getAccessToken()
@@ -31,12 +35,36 @@ export class MoviesComponent {
       this.moviesArr = data
     })
 
+    let userString = localStorage.getItem('infoUser')
+
+   if(userString !== null){
+
+     this.user = JSON.parse(userString)
+
+   }else{
+
+    return
+
+   }
+
   }
 
   aggiungiPreferiti(el:iMovies){
 
+
+    if(!el.userId){
+
+      el.userId = []
+
+    el.userId.push(this.user.id)
+    }else{
+      el.userId.push(this.user.id)
+    }
+
     this.spawnSvc.pushFavorites(el).subscribe()
 
   }
+
+
 
 }

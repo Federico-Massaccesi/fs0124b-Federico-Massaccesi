@@ -34,6 +34,20 @@
       "nome": "Odit sit voluptatum ",
       "cognome": "Fugiat facere quia ",
       "id": 5
+    },
+    {
+      "email": "fede99@gmail.com",
+      "password": "$2a$10$bg6z20rISDW9tmKmDGaPbOz0niAKt07T05cCznpnySzAaXDzFDk1C",
+      "nome": "Federico",
+      "cognome": "Massaccesi",
+      "id": 6
+    },
+    {
+      "email": "mariovarano@gmail.com",
+      "password": "$2a$10$fuhji6Q/wZpcniXOVaAW3O3RmVl4isvUt/OMGfPusdb7eT2ceHHN6",
+      "nome": "mario",
+      "cognome": "varano",
+      "id": 7
     }
   ],
   "popularMovies": [

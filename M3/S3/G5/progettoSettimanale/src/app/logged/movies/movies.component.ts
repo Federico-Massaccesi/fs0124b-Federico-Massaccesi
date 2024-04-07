@@ -24,7 +24,7 @@ export class MoviesComponent {
 
    this.loggedOrNot =  this.authSvc.getAccessToken()
 
-    this.authSvc.isLoggedIn = this.authSvc.getAccessToken()
+    // this.authSvc.isLoggedIn = this.authSvc.getAccessToken()
 
     this.spawnSvc.getMovies().subscribe(data =>{
 

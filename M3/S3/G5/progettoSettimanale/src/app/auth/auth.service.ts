@@ -21,12 +21,12 @@ export class AuthService {
 
   jwtHelper:JwtHelperService = new JwtHelperService()
 
-  isLoggedIn:boolean= false
 
   authSubject = new BehaviorSubject<iUser|null>(null)
 
   $user = this.authSubject.asObservable()
 
+  isLoggedIn$ = this.$user.pipe(map(user => Boolean(user)))
 
   registerUrl:string = 'http://localhost:3000/register'
   loginUrl:string = 'http://localhost:3000/login'

@@ -17,18 +17,13 @@ export class LoginComponent {
     private router:Router
   ){}
 
-  ngOnInit(){
-
-    this.authSvc.isLoggedIn = this.authSvc.getAccessToken()
-
-  }
 
   signIn(){
 
     this.authSvc.login(this.loginData)
     .subscribe(data=>{
 
-      this.router.navigate(['/'])
+      this.router.navigate(['/logged/movies'])
     })
 
   }

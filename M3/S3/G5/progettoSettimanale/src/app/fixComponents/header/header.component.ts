@@ -8,7 +8,7 @@ import { AuthService } from '../../auth/auth.service';
 })
 export class HeaderComponent {
 
-
+logged:boolean = false
 
   constructor(private authSvc: AuthService){}
 
@@ -19,6 +19,20 @@ export class HeaderComponent {
 
   }
 
+  ngOnInit(){
+
+
+    this.authSvc.isLoggedIn$.subscribe(data=>{
+
+      this.logged = data
+
+    })
+
+  }
+
+
+
+  }
 
 
 
@@ -31,7 +45,7 @@ export class HeaderComponent {
 
 
 
-  }
+
 
 
 

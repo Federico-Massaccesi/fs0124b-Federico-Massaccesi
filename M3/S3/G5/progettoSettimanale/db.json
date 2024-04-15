@@ -55,6 +55,13 @@
       "nome": "mario",
       "cognome": "mari",
       "id": 8
+    },
+    {
+      "email": "miryamiannelli@gmail.com",
+      "password": "$2a$10$xcXnHGJ5fm40zsPvBOD7b.H98mXRLeGd/6yWjigo4prX2JvQlR0lW",
+      "nome": "Miryam",
+      "cognome": "Iannelli",
+      "id": 9
     }
   ],
   "popularMovies": [

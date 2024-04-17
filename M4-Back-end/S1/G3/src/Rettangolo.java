@@ -35,7 +35,7 @@ public class Rettangolo {
         public void stampaDueRettangoli(Rettangolo x, Rettangolo y){
 
             System.out.println("La somma dell'area dei rettangoli è:"+ (x.getArea()+y.getArea()));
-            System.out.println("La somma deli perimetri dei rettangoli è:"+ (x.getPerimetro()+y.getPerimetro()));
+            System.out.println("La somma dei perimetri dei rettangoli è:"+ (x.getPerimetro()+y.getPerimetro()));
         }
 
 

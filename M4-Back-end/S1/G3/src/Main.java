@@ -4,7 +4,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-
+//ES1
     Rettangolo rettangolo1 = new Rettangolo(2,6);
         System.out.println(rettangolo1.getArea());
 
@@ -15,5 +15,13 @@ public class Main {
         rettangolo1.stampaRettangoli(rettangolo1);
 
         rettangolo1.stampaDueRettangoli(rettangolo1,rettangolo2);
+
+        //////////////////////////////////////////////////////////////////////////
+
+        //ES2
+
+        Sim sim1 = new Sim(3662556652L);
+
+        sim1.stampaDati(sim1);
     }
 }

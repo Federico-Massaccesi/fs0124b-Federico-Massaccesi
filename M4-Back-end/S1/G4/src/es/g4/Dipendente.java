@@ -1,6 +1,6 @@
 package es.g4;
 
-public class Dipendente {
+public abstract class Dipendente {
 
     private int matricola;
 
@@ -40,6 +40,10 @@ public class Dipendente {
 
          return dip;
     }
+
+    public int calculateSalary(){
+        return this.getStipendio();
+    };
 
 
 

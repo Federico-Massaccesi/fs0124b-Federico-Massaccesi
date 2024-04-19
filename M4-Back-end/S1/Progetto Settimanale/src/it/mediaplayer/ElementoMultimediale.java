@@ -1,6 +1,7 @@
 package it.mediaplayer;
 
 public abstract class ElementoMultimediale {
+//CLASSE ASTRATTA GENITORE
 
     private String titolo;
 

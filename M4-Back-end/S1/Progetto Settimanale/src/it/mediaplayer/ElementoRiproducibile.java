@@ -1,11 +1,12 @@
 package it.mediaplayer;
 
 public class ElementoRiproducibile extends ElementoMultimediale implements MetodiRiproducibili{
-
+//CLASSE ASTRATTA GENITORE DI AUDIO E VIDEO PER CONDIVIDERE ATTRIBUTI E METODI
     private int durata;
 
     private int volume;
 
+    //IL TITOLO VIENE RIPRESO DAL COSTRUTTORE DEL GENITORE
     public ElementoRiproducibile(String titolo,int durata,int volume) {
         super(titolo);
         this.durata = durata;

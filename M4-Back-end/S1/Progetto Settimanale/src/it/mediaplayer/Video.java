@@ -47,6 +47,7 @@ public class Video extends ElementoRiproducibile implements MetodiVisualizzabili
 
                 System.out.print("!");
             }
+            System.out.print("-");
             for(int x = 0;x< getLuminosità();x++){
 
                 System.out.print("*");

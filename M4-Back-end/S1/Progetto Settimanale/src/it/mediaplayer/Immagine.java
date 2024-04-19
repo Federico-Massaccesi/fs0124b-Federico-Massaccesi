@@ -5,7 +5,7 @@ public class Immagine extends ElementoMultimediale implements MetodiVisualizzabi
     private String titolo;
 
     private int luminosità;
-
+    //RICHIAMO IL SUPER COSTRUTTORE DELLA CLASSE GENITORE E AGGIUGNO ATTRIBUTI SPECIFICI DELLA CLASSE
     public Immagine(String titolo,int luminosità) {
         super(titolo);
         this.luminosità = luminosità;
@@ -18,7 +18,7 @@ public class Immagine extends ElementoMultimediale implements MetodiVisualizzabi
     public void setLuminosità(int luminosità) {
         this.luminosità = luminosità;
     }
-
+    //DEFINISCO IL METODO SHOW DIRETTAMENTE NELLA CLASSE IN QUANTO QUESTA CLASSE SARÀ L'UNICA AD UTILIZZARLO
     public void show(){
 
         System.out.print(getTitolo()+" Luminosità:");
@@ -30,7 +30,7 @@ public class Immagine extends ElementoMultimediale implements MetodiVisualizzabi
         }
         System.out.println(".");
     }
-
+    //FACCIO OVERRIDE DEI MOTODO CREATO NELL'INTERFACCIA
     @Override
     public void aumentaLuminosità() {
     if(getLuminosità()<100){

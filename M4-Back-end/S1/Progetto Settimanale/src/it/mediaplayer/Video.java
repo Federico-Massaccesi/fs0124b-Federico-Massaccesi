@@ -1,5 +1,5 @@
 package it.mediaplayer;
-
+//AGGIUNGO L'UNICO ATTRIBUTO CHE NON ERA PRESENTE NEL SUPERCOSTRUTTORE
 public class Video extends ElementoRiproducibile implements MetodiVisualizzabili{
 
     private int luminosità;
@@ -16,8 +16,8 @@ public class Video extends ElementoRiproducibile implements MetodiVisualizzabili
     public void setLuminosità(int luminosità) {
         this.luminosità = luminosità;
     }
-    @Override
 
+    @Override
     public void aumentaLuminosità() {
         if(getLuminosità()<100){
             setLuminosità(getLuminosità()+1);
@@ -35,7 +35,7 @@ public class Video extends ElementoRiproducibile implements MetodiVisualizzabili
             System.out.println("Luminosità già al minimo");
         }
     }
-
+    //RIDEFINISCO IL METODO PER STAMPARE A SCHERMO SIA LUMINOSITÀ CHE VOLUME
     @Override
     public void play(){
 

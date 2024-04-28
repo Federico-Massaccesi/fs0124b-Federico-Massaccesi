@@ -116,7 +116,7 @@ public class FunzionalitàArchivio implements Funzionalità {
 
     @Override
     public void load() {
-
+//INCOMPLETO
 File f = new File(STORAGE);
 try{
     var l = FileUtils.readLines(f, StandardCharsets.ISO_8859_1);

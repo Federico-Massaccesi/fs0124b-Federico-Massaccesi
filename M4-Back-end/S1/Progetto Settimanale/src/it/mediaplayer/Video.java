@@ -9,7 +9,6 @@ public class Video extends ElementoRiproducibile implements MetodiVisualizzabili
         this.luminosità = luminosità;
     }
 
-
     public int getLuminosità() {
         return luminosità;
     }

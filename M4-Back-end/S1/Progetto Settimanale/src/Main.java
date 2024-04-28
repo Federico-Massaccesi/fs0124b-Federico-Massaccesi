@@ -9,7 +9,6 @@ public class Main {
     public static void main(String[] args) {
 //TEST CLASSE E METODI IMMAGINE
     Immagine img1 = new Immagine ("Immagine 1",7);
-
     img1.show();
 //TEST CLASSE E METODI VIDEO
         Video vid1 = new Video("Video 1",6,0,2);
@@ -24,6 +23,8 @@ public class Main {
         audio1.alzaVolume();
 
         audio1.play();
+
+
     }
 
 

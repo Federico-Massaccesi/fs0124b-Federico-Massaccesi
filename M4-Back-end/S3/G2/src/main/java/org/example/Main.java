@@ -43,6 +43,10 @@ public class Main {
 
             listaEventi.stream().forEach(ev -> em.persist(ev));
 
+            Evento ev3 = em.find(Evento.class, 252);
+
+            em.remove(ev3);
+
             trans.commit();
 
             em.close();

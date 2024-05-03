@@ -22,6 +22,8 @@ public class Main {
 
         final Logger logger = LoggerFactory.getLogger(Main.class);
 
+        EventoDAO dao = new EventoDAO();
+
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("gestioneeventi");
 
         EntityManager em = emf.createEntityManager();
@@ -31,7 +33,7 @@ public class Main {
 
         var ev1 = new Evento("Evento 1", new Date(), "Descrizione evento 1", TipoEvento.PUBBLICO,20000);
 
-        var ev2 = new Evento("Evento 2", new Date(), "Descrizione evento 1", TipoEvento.PUBBLICO,20000);
+        var ev2 = new Evento("Evento 2", new Date(), "Descrizione evento 2", TipoEvento.PRIVATO,1200);
 
         listaEventi.add(ev1);
         listaEventi.add(ev2);
@@ -41,11 +43,7 @@ public class Main {
 
             trans.begin();
 
-            listaEventi.stream().forEach(ev -> em.persist(ev));
-
-            Evento ev3 = em.find(Evento.class, 252);
-
-            em.remove(ev3);
+            listaEventi.stream().forEach(ev -> dao.save(ev));
 
             trans.commit();
 

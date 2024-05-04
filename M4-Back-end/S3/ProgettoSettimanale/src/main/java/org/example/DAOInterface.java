@@ -14,7 +14,7 @@ public interface DAOInterface {
 
     public Optional<Prodotti> getByISBN(Integer ISBN);
 
-    public Prodotti getByAnno(Integer anno);
+    public List<Prodotti> getByAnno(Integer anno);
 
     public List<Prodotti > getByAutore(String autore);
 

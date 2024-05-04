@@ -24,9 +24,13 @@ public class BibliotecaDAO implements DAOInterface {
     @Override
     public void save(Prodotti prod) {
 
-        em.getTransaction().begin();
+        var transaction = em.getTransaction();
+
+        transaction.begin();
+
         em.persist(prod);
-        em.getTransaction().commit();
+
+        transaction.commit();
     }
 
     @Override
@@ -43,23 +47,49 @@ public class BibliotecaDAO implements DAOInterface {
 
             query.setParameter("ISBN", ISBN);
 
-//            return query.getResultList().get(0);
+            var prod = (Prodotti) query.getSingleResult();
 
+                return Optional.of(prod);
 
         }catch (Exception e) {
-
+            logger.error("Elemento con ISBN specificato inesistente", e);
+            return Optional.empty();
         }
 
     }
 
     @Override
-    public Prodotti getByAnno(Integer anno) {
-        return null;
+    public List<Prodotti> getByAnno(Integer anno) {
+        try {
+            var query = em.createNamedQuery("GET_BY_ANNO");
+
+            query.setParameter("AUTORE", anno);
+
+            List<Prodotti> result = query.getResultList();
+
+            return result;
+
+        }catch (Exception e) {
+            logger.error("Nessun libro uscito in questo anno nel catalogo", e);
+            return null;
+        }
     }
 
     @Override
     public List<Prodotti> getByAutore(String autore) {
-        return List.of();
+        try {
+            var query = em.createNamedQuery("GET_BY_AUTORE");
+
+            query.setParameter("AUTORE", autore);
+
+            List<Prodotti> result = query.getResultList();
+
+            return result;
+
+        }catch (Exception e) {
+            logger.error("Elemento con ISBN specificato inesistente", e);
+            return null;
+        }
     }
 
     @Override

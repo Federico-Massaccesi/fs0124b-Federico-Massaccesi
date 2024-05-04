@@ -2,6 +2,7 @@ package it.biblioteca.prodotti;
 
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
+import jakarta.persistence.NamedQuery;
 import jakarta.persistence.Table;
 
 @Entity

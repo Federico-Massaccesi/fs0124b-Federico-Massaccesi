@@ -16,12 +16,14 @@ public class Main {
 
         var dao = new BibliotecaDAO();
 
-        var rivista1 = new Riviste("libro della muerte", 250, 2018, Periodicita.ANNUALE);
+        var libro1 = new Libri("libro dell", 120, 2018,"fausto", "horror");
 
 
-        dao.save(rivista1);
+        dao.save(libro1);
 
-
+        System.out.println(dao.getByAutore("mario"));
     }
+
+
 
 }

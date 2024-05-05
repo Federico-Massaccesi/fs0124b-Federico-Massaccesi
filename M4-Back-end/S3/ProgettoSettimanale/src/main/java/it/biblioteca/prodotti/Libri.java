@@ -42,8 +42,16 @@ public class Libri extends Prodotti {
     @Override
     public String toString() {
         return "Libri{" +
-                "autore='" + autore + '\'' +
+                "ISBN=" + getISBN() +
+                ", titolo='" + getTitolo() + '\'' +
+                ", annoPubblicazione=" + getAnnoPubblicazione() +
+                ", numeroPagine=" + getNumeroPagine() +
+                " autore='" + autore + '\'' +
                 ", genere='" + genere + '\'' +
                 '}';
+
+
     }
 }
+
+

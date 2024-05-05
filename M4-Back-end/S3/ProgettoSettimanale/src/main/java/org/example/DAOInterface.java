@@ -18,7 +18,7 @@ public interface DAOInterface {
 
     public List<Prodotti > getByAutore(String autore);
 
-    public Prodotti getByTitolo(String titolo);
+    public List<Prodotti> getByTitolo(String titolo);
 
     public List<Prodotti> getElementiInPrestito(Integer numeroTessera);
 

@@ -24,4 +24,15 @@ public class Riviste extends Prodotti {
     public void setPeriodicita(Periodicita periodicita) {
         this.periodicita = periodicita;
     }
+
+    @Override
+    public String toString() {
+        return "Riviste{" +
+                "ISBN=" + getISBN() +
+                ", titolo='" + getTitolo() + '\'' +
+                ", annoPubblicazione=" + getAnnoPubblicazione() +
+                ", numeroPagine=" + getNumeroPagine() +
+                "periodicita=" + periodicita +
+                '}';
+    }
 }

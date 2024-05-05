@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,6 +37,21 @@ public class BibliotecaDAO implements DAOInterface {
     @Override
     public void removeByISBN(Integer ISBN) {
 
+        try {
+            Prodotti prod = em.find(Prodotti.class, ISBN);
+
+            if (prod != null) {
+                var t = em.getTransaction();
+                t.begin();
+                em.remove(prod);
+                t.commit();
+                logger.info("Prodotto con ISBN {} rimosso con successo", ISBN);
+            } else {
+                logger.warn("Nessun prodotto trovato con ISBN {}", ISBN);
+            }
+        } catch (Exception e) {
+            logger.error("Errore durante la rimozione del prodotto con ISBN {}", ISBN, e);
+        }
 
     }
 
@@ -63,7 +79,7 @@ public class BibliotecaDAO implements DAOInterface {
         try {
             var query = em.createNamedQuery("GET_BY_ANNO");
 
-            query.setParameter("AUTORE", anno);
+            query.setParameter("ANNOPUBBLICAZIONE", anno);
 
             List<Prodotti> result = query.getResultList();
 
@@ -93,8 +109,20 @@ public class BibliotecaDAO implements DAOInterface {
     }
 
     @Override
-    public Prodotti getByTitolo(String titolo) {
-        return null;
+    public List<Prodotti> getByTitolo(String titolo) {
+        try {
+            var query = em.createNamedQuery("GET_BY_TITOLO");
+
+            query.setParameter("TITOLO", titolo);
+
+            List<Prodotti> result = query.getResultList();
+
+            return result;
+
+        }catch (Exception e) {
+            logger.error("Elemento con ISBN specificato inesistente", e);
+            return null;
+        }
     }
 
     @Override

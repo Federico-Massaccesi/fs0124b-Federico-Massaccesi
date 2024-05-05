@@ -7,7 +7,8 @@ import jakarta.persistence.*;
 @DiscriminatorColumn(name = "prodotti_generici")
 @NamedQuery(name = "GET_BY_ISBN", query = "SELECT r FROM Prodotti r WHERE ISBN = :ISBN")
 @NamedQuery(name = "GET_BY_AUTORE",query = "SELECT r FROM Prodotti r WHERE autore = :AUTORE")
-@NamedQuery(name = "GET_BY_ANNO",query = "SELECT r FROM Prodotti r WHERE annopubblicazione = :ANNOPUBBLICAZIONE")
+@NamedQuery(name = "GET_BY_ANNO",query = "SELECT r FROM Prodotti r WHERE annoPubblicazione = :ANNOPUBBLICAZIONE")
+@NamedQuery(name ="GET_BY_TITOLO", query = "SELECT r FROM Prodotti r WHERE titolo LIKE CONCAT('%', :TITOLO, '%')")
 public abstract class Prodotti {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

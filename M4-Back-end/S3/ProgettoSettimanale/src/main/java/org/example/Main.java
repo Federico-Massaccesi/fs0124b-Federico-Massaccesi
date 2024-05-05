@@ -16,12 +16,11 @@ public class Main {
 
         var dao = new BibliotecaDAO();
 
-        var libro1 = new Libri("libro dell", 120, 2018,"fausto", "horror");
-
+        var libro1 = new Libri("maurizio", 120, 2018,"fausto", "horror");
 
         dao.save(libro1);
 
-        System.out.println(dao.getByAutore("mario"));
+        System.out.println(dao.getByTitolo("mau"));
     }
 
 

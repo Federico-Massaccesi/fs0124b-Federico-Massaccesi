@@ -1,9 +1,7 @@
-package entities;
+package it.epicode.progettosettimanale.entities;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,9 +16,17 @@ import java.util.Date;
 @Builder(setterPrefix = "with")
 public class Prenotazione {
 
-    private Date dataPrenotata;
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    private Date dataPrenotazione;
 
     @ManyToOne
     @JoinColumn(name = "utente_id")
     private Utente utente;
+
+    @ManyToOne
+    @JoinColumn(name = "postazione_id")
+    private Postazione postazione;
 }

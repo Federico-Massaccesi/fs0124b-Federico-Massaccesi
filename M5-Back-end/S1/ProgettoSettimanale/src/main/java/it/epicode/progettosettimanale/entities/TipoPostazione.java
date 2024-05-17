@@ -1,4 +1,4 @@
-package entities;
+package it.epicode.progettosettimanale.entities;
 
 public enum TipoPostazione {
 

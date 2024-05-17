@@ -1,10 +1,12 @@
-package entities;
+package it.epicode.progettosettimanale.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @Entity
@@ -23,6 +25,6 @@ public class Edificio {
     private String indirizzo;
     @Column
     private String citta;
-
-
+    @OneToMany(mappedBy = "edificio")
+    private List<Postazione> postazioni;
 }

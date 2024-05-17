@@ -1,4 +1,4 @@
-package entities;
+package it.epicode.progettosettimanale.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

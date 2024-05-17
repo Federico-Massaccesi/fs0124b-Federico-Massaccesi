@@ -1,8 +1,6 @@
-package entities;
+package it.epicode.progettosettimanale.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -28,15 +26,18 @@ public class Postazione {
 
     private Long capienzaMassima;
 
+    @ManyToOne
+    @JoinColumn(name="edificio_id")
     private Edificio edificio;
 
     private Boolean disponibilita;
 
-    private List<Date> datePrenotate;
+    @OneToMany(mappedBy = "postazione")
+    private List<Prenotazione> prenotazioni;
 
 
-    public void setDatePrenotate(Date data){
+    public void setDatePrenotate(Prenotazione prenotazione){
 
-        this.datePrenotate.add(data);
+        this.prenotazioni.add(prenotazione);
     }
 }

@@ -1,4 +1,4 @@
-package it.epicode.ProgettoSettimanale;
+package it.epicode.progettosettimanale;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

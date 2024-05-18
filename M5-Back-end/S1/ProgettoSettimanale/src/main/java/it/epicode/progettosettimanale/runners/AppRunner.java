@@ -13,8 +13,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import it.epicode.progettosettimanale.repositories.EdificioRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Component
@@ -43,17 +45,16 @@ public class AppRunner implements CommandLineRunner {
     List<Utente> utenti;
 
 
+
     @Override
     public void run(String... args) throws Exception {
 
-    posts.forEach(post -> postRepository.save(post));
+        edifici.forEach(edificio -> edificioRepository.save(edificio));
 
-    utenti.forEach(utente -> utenteRepository.save(utente));
+        posts.forEach(post -> postRepository.save(post));
 
-    edifici.forEach(edificio -> edificioRepository.save(edificio));
-
-//        postRepository.findByTipoPostazione(TipoPostazione.PRIVATO).stream().
-//                forEach(el -> log.debug(el.toString()));
+        utenti.forEach(utente -> utenteRepository.save(utente));
 
     }
+
 }

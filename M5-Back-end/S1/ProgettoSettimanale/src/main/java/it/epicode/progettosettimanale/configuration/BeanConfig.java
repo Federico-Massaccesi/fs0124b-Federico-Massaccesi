@@ -4,6 +4,7 @@ import it.epicode.progettosettimanale.entities.Edificio;
 import it.epicode.progettosettimanale.entities.Postazione;
 import it.epicode.progettosettimanale.entities.TipoPostazione;
 import it.epicode.progettosettimanale.entities.Utente;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

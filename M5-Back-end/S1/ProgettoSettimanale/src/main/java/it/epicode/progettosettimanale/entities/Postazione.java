@@ -22,11 +22,12 @@ public class Postazione {
 
     private String descrizione;
 
+    @Enumerated(EnumType.STRING)
     private TipoPostazione tipoPostazione;
 
     private Long capienzaMassima;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="edificio_id")
     private Edificio edificio;
 
@@ -40,4 +41,5 @@ public class Postazione {
 
         this.prenotazioni.add(prenotazione);
     }
+
 }

@@ -37,10 +37,11 @@ public class PostsController {
         return new ResponseEntity<List<Post>>(posts, HttpStatus.OK);
     }
 
-    @GetMapping(value = "{id}")
+    @GetMapping(value = "/:{id}")
     public ResponseEntity<Post> getPostById(@PathVariable Long id){
         Optional<Post> post = postsService.getPostById(id);
         return post.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
+
 }

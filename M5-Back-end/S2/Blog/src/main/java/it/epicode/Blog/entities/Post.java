@@ -1,9 +1,6 @@
 package it.epicode.Blog.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Data
@@ -29,4 +26,7 @@ public class Post {
     @Setter
     private Integer minutesToRead;
 
+    @ManyToOne
+    @JoinColumn(name = "author_id")
+    private Author author;
 }

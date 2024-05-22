@@ -1,15 +1,13 @@
 package it.epicode.Blog.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Entity
@@ -32,6 +30,9 @@ public class Author {
     private Date birthdate;
 
     private String avatar;
+
+    @OneToMany(mappedBy = "author")
+    private List<Post> postList;
 
 
 }

@@ -44,7 +44,7 @@ public class PostsController {
     @PutMapping(value = "/{id}")
     public ResponseEntity<Post> updatePost(@PathVariable Long id, @RequestBody Post post){
 
-        Optional<Post> p= postsService.UpdatePost(id, post);
+        Optional<Post> p= postsService.updatePost(id, post);
         return p.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
 

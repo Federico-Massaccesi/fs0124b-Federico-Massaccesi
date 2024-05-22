@@ -31,7 +31,7 @@ public class PostService {
         return postRepository.findById(id);
     }
 
-    public Optional<Post> UpdatePost(Long id,Post post) {
+    public Optional<Post> updatePost(Long id,Post post) {
 
         Optional<Post> foundedPost = postRepository.findById(id);
 

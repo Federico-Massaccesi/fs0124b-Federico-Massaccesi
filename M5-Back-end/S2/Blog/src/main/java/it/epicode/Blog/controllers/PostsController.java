@@ -25,11 +25,8 @@ public class PostsController {
 
         var u = postsService.savePost(post);
 
-        if(u.isEmpty()) {
-            throw new RuntimeException("Impossibile salvare il post");
-        }else{
-            return new ResponseEntity<Post>(u.get(), HttpStatus.CREATED);
-        }
+            return new ResponseEntity<Post>(u, HttpStatus.CREATED);
+
     }
     @GetMapping
     public ResponseEntity<List<Post>> getAllPosts(){
@@ -37,10 +34,27 @@ public class PostsController {
         return new ResponseEntity<List<Post>>(posts, HttpStatus.OK);
     }
 
-    @GetMapping(value = "/:{id}")
+    @GetMapping(value = "/{id}")
     public ResponseEntity<Post> getPostById(@PathVariable Long id){
         Optional<Post> post = postsService.getPostById(id);
         return post.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
+                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<Post> updatePost(@PathVariable Long id, @RequestBody Post post){
+
+        Optional<Post> p= postsService.UpdatePost(id, post);
+        return p.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
+                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+
+    }
+
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Post> deletePost(@PathVariable Long id){
+
+        Optional<Post> p= postsService.deletePost(id);
+        return p.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 

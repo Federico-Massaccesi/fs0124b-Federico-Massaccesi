@@ -5,6 +5,10 @@ import it.epicode.Blog.entities.Post;
 import it.epicode.Blog.repositories.AuthorRepository;
 import it.epicode.Blog.repositories.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,9 +26,9 @@ public class AuthorService {
         return authorRepository.save(author);
     }
 
-    public List<Author> getAuthorList() {
+    public Page<Author> getAuthorList(Pageable p) {
 
-        return authorRepository.findAll();
+        return authorRepository.findAll(p);
     }
 
     public Optional<Author> getAuthorById(Long id) {

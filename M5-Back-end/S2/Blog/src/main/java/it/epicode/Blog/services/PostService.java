@@ -1,9 +1,12 @@
 package it.epicode.Blog.services;
 
+import it.epicode.Blog.entities.Author;
 import it.epicode.Blog.entities.Post;
 import it.epicode.Blog.repositories.PostRepository;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -21,9 +24,9 @@ public class PostService {
         return postRepository.save(post);
     }
 
-    public List<Post> getPostList() {
+    public Page<Post> getPostList(Pageable p) {
 
-        return postRepository.findAll();
+        return postRepository.findAll(p);
     }
 
     public Optional<Post> getPostById(Long id) {

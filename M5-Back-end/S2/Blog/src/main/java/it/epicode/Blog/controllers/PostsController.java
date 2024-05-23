@@ -1,10 +1,13 @@
 package it.epicode.Blog.controllers;
 
+import it.epicode.Blog.entities.Author;
 import it.epicode.Blog.entities.Post;
 import it.epicode.Blog.services.PostService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,9 +32,9 @@ public class PostsController {
 
     }
     @GetMapping
-    public ResponseEntity<List<Post>> getAllPosts(){
-        var posts = postsService.getPostList();
-        return new ResponseEntity<List<Post>>(posts, HttpStatus.OK);
+    public ResponseEntity<Page<Post>> getAllAuthors(Pageable p) {
+
+        return new ResponseEntity<Page<Post>>(postsService.getPostList(p), HttpStatus.OK);
     }
 
     @GetMapping(value = "/{id}")

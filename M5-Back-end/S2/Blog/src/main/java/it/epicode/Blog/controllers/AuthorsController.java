@@ -1,17 +1,15 @@
 package it.epicode.Blog.controllers;
 
 import it.epicode.Blog.entities.Author;
-import it.epicode.Blog.entities.Post;
 import it.epicode.Blog.services.AuthorService;
-import it.epicode.Blog.services.PostService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 import java.util.Optional;
 
 
@@ -32,9 +30,9 @@ public class AuthorsController {
 
     }
     @GetMapping
-    public ResponseEntity<List<Author>> getAllAuthors(){
-        var author = authorService.getAuthorList();
-        return new ResponseEntity<List<Author>>(author, HttpStatus.OK);
+    public ResponseEntity<Page<Author>> getAllAuthors(Pageable p) {
+
+        return new ResponseEntity<Page<Author>>(authorService.getAuthorList(p), HttpStatus.OK);
     }
 
     @GetMapping(value = "/{id}")

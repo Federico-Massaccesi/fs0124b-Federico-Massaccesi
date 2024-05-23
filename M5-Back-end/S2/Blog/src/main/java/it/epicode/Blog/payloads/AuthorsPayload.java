@@ -1,42 +1,29 @@
 package it.epicode.Blog.payloads;
 
-import it.epicode.Blog.entities.Post;
-import jakarta.persistence.OneToMany;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
 import org.hibernate.validator.constraints.URL;
-
 import java.util.Date;
-import java.util.List;
+
 
 public record AuthorsPayload(
 
-        @NotNull
-        Long id,
-        @NotNull
-        @NotBlank
-        @Size(min=2)
-        @Size(max=25)
+        @NotNull(message = "Il nome non può essere omesso")
+        @NotBlank(message = "Il campo non può essere vuoto o composto solo da spazi")
         String name,
-        @NotNull
-        @NotBlank
-        @Size(min=2)
-        @Size(max=25)
+        @NotNull(message = "Il cognome non può essere omesso")
+        @NotBlank(message = "Il campo non può essere vuoto o composto solo da spazi")
         String surname,
-        @NotNull
-        @NotBlank
-        @Email
+        @NotNull(message = "L'email non può essere omessa")
+        @NotBlank(message = "Il campo non può essere vuoto o composto solo da spazi")
+        @Email(message = "Formato email non valido")
         String email,
-        @NotNull
+        @NotNull(message = "La data di nascita non può essere omessa")
         Date birthdate,
-        @NotNull
-        @URL
-        String avatar,
-
-        @OneToMany(mappedBy = "author")
-                List<Post> postList
+        @URL(message = "Il campo deve essere un URL valido")
+        String avatar
 ) {
 
 

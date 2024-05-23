@@ -15,15 +15,13 @@ public record PostsPayload(
         @NotNull
         @NotBlank
          String title,
-        @NotNull
                 @URL
          String cover,
         @NotNull
                 @NotBlank
          String content,
-
         @NotNull
-                @Size(min=1)
+                @Size(min=1,message = "I minuti non possono essere 0")
          Integer minutesToRead,
 
         @NotNull

@@ -1,7 +1,7 @@
 package it.epicode.Blog.controllers;
 
-import it.epicode.Blog.entities.Author;
 import it.epicode.Blog.entities.Post;
+import it.epicode.Blog.exceptions.BadRequestExc;
 import it.epicode.Blog.services.PostService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,9 +10,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -24,7 +25,11 @@ public class PostsController {
     private PostService postsService;
 
     @PostMapping
-    public ResponseEntity<Post> savePost(@RequestBody Post post) {
+    public ResponseEntity<Post> savePost(@RequestBody @Validated Post post, BindingResult validator) {
+
+        if(validator.hasErrors()) {
+            throw new BadRequestExc(validator.getAllErrors());
+        }
 
         var u = postsService.savePost(post);
 

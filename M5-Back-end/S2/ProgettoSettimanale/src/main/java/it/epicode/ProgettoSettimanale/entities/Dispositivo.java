@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "Dispositivi")
+@Table(name = "dispositivi")
 @Builder(setterPrefix = "with")
 public class Dispositivo {
 
@@ -24,6 +24,6 @@ public class Dispositivo {
 
     @ManyToOne
     @JoinColumn(name = "dipendente_id")
-    private Dipendente dipendenteAssegnato;
+    private Dipendente dipendente;
 
 }

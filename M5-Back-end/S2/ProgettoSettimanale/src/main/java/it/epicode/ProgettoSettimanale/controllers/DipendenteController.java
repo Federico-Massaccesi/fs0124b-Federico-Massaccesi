@@ -1,16 +1,16 @@
 package it.epicode.ProgettoSettimanale.controllers;
 
 import it.epicode.ProgettoSettimanale.entities.Dipendente;
+import it.epicode.ProgettoSettimanale.records.DipendenteValidation;
 import it.epicode.ProgettoSettimanale.services.DipendenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -21,11 +21,16 @@ public class DipendenteController {
     DipendenteService dipService;
 
     @PostMapping
-    public ResponseEntity<Dipendente> salvaDipendente(@RequestBody Dipendente d){
+    public ResponseEntity<?> salvaDipendente(@RequestBody @Validated DipendenteValidation  d, BindingResult validation){
 
-        var dip = dipService.saveDipendente(d);
+        if(validation.hasErrors()) {
+            throw new RuntimeException("errore");
+        }else{
+            var dip = dipService.saveDipendente(d);
 
-        return new ResponseEntity<>(dip, HttpStatus.CREATED);
+            return new ResponseEntity<>(dip, HttpStatus.CREATED);
+        }
+
     }
 
     @GetMapping
@@ -44,5 +49,24 @@ public class DipendenteController {
         return new ResponseEntity<>(dip, HttpStatus.OK);
     }
 
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<Optional<Dipendente>> updateDipendente(@PathVariable Long id,@RequestBody Dipendente dip){
 
+        var d = dipService.updateDipendenteById(id, dip);
+        if(d.isPresent()){
+            return new ResponseEntity<>(d, HttpStatus.OK);
+        }else{
+            throw new RuntimeException("Error updating");
+        }
+    }
+
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Dipendente> deleteDipendente(@PathVariable Long id){
+        var d = dipService.deleteDipendenteById(id);
+        if(d.isPresent()){
+            return new ResponseEntity<>(d.get(), HttpStatus.OK);
+        }else{
+            throw new RuntimeException("Error deleting");
+        }
+    }
 }

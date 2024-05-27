@@ -12,7 +12,7 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "Dipendenti")
+@Table(name = "dipendenti")
 @Builder(setterPrefix = "with")
 public class Dipendente {
 

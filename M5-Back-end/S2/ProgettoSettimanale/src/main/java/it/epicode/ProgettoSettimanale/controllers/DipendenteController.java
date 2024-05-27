@@ -1,6 +1,7 @@
 package it.epicode.ProgettoSettimanale.controllers;
 
 import it.epicode.ProgettoSettimanale.entities.Dipendente;
+import it.epicode.ProgettoSettimanale.exceptions.NoElementFoundExc;
 import it.epicode.ProgettoSettimanale.records.DipendenteValidation;
 import it.epicode.ProgettoSettimanale.services.DipendenteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/dipendente")
@@ -24,15 +28,25 @@ public class DipendenteController {
     public ResponseEntity<?> salvaDipendente(@RequestBody @Validated DipendenteValidation  d, BindingResult validation){
 
         if(validation.hasErrors()) {
-            throw new RuntimeException("errore");
+
+            List<String> errorMessages = validation.getFieldErrors().stream()
+                    .map(error ->error.getField() + ": " + error.getDefaultMessage())
+                    .toList();
+            return new ResponseEntity<>(errorMessages,HttpStatus.NOT_FOUND);
         }else{
+            var Dip = Dipendente.builder()
+                    .withNome(d.nome())
+                    .withCognome(d.cognome())
+                    .withUsername(d.username())
+                    .withEmail(d.email())
+                    .build();
             var dip = dipService.saveDipendente(d);
+//////////////////////////////////////////////
+            return new ResponseEntity<>(dip, HttpStatus.CREATED);////////////////////
+        }(((((((((((((((((((((())))))))))))))))))))))
 
-            return new ResponseEntity<>(dip, HttpStatus.CREATED);
-        }
-
-    }
-
+    }!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>><<<<>><><<<<<<wvgvwwwwwwevrrrrrrrrrrrrrrrrrrrrrrrrrrrrvdwcccwwvwvdvdwvdwvdwvdwvdvdwvdwvdwvdwvdw98vdw95wdv1dwv651vw9vd1wvd9519e+v1dwev1d2e+v129ev19e88v1
     @GetMapping
     public ResponseEntity<Page<Dipendente>> listaDipendenti(Pageable p){
 

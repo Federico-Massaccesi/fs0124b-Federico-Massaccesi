@@ -21,6 +21,7 @@ public record DipendenteValidation(
          String username,
         @NotNull(message="Campo obbligatorio")
                 @Email(message = "Formato email non valido")
-         String email
+         String email,
+        List<Dispositivo> dispositivi
 ) {
 }

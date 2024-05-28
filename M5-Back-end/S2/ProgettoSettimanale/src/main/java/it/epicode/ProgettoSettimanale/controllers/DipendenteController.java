@@ -32,21 +32,21 @@ public class DipendenteController {
             List<String> errorMessages = validation.getFieldErrors().stream()
                     .map(error ->error.getField() + ": " + error.getDefaultMessage())
                     .toList();
-            return new ResponseEntity<>(errorMessages,HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(errorMessages,HttpStatus.BAD_REQUEST);
         }else{
             var Dip = Dipendente.builder()
                     .withNome(d.nome())
                     .withCognome(d.cognome())
                     .withUsername(d.username())
                     .withEmail(d.email())
+                    .withDispositivi(d.dispositivi())
                     .build();
-            var dip = dipService.saveDipendente(d);
-//////////////////////////////////////////////
-            return new ResponseEntity<>(dip, HttpStatus.CREATED);////////////////////
-        }(((((((((((((((((((((())))))))))))))))))))))
+            var dip = dipService.saveDipendente(Dip);
 
-    }!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>><<<<>><><<<<<<wvgvwwwwwwevrrrrrrrrrrrrrrrrrrrrrrrrrrrrvdwcccwwvwvdvdwvdwvdwvdwvdvdwvdwvdwvdwvdw98vdw95wdv1dwv651vw9vd1wvd9519e+v1dwev1d2e+v129ev19e88v1
+            return new ResponseEntity<>(dip, HttpStatus.CREATED);
+        }
+
+    }
     @GetMapping
     public ResponseEntity<Page<Dipendente>> listaDipendenti(Pageable p){
 
@@ -57,10 +57,13 @@ public class DipendenteController {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<Optional<Dipendente>> getDipendenteById(@PathVariable Long id){
-
+    try {
         var dip = dipService.getDipendenteById(id);
 
         return new ResponseEntity<>(dip, HttpStatus.OK);
+    }catch(Exception e){
+        throw new NoElementFoundExc("Dipendente non trovato");
+        }
     }
 
     @PutMapping(value = "/{id}")

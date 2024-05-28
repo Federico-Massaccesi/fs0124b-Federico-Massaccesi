@@ -13,18 +13,19 @@ import java.util.Map;
 public class GlobalExceptionHandler {
 
 @ExceptionHandler(NoElementFoundExc.class)
-    @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ResponseEntity<Map<String,String>> handleNoElementFoundExc(NoElementFoundExc e) {
-        Map<String, String> error = new HashMap<>();
-        error.put("message", e.getMessage());
-        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
+    public ResponseEntity<Object> handleNoElementFoundExc(NoElementFoundExc e) {
+        return new ResponseEntity<>(e,e.getStatus());
     }
 
     @ExceptionHandler(InvalidDataProvided.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<Map<String,String>> handleInvalidDataProvided(InvalidDataProvided e) {
         Map<String, String> error = new HashMap<>();
         error.put("message", e.getMessage());
         return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+    }
+
+    private ResponseEntity<Object> buildResponseEntity(APIError apiError){
+
+    return new ResponseEntity<>(apiError,apiError.getStatus());
     }
 }

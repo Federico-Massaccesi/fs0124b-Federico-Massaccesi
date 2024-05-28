@@ -1,6 +1,7 @@
 package it.epicode.ProgettoSettimanale.controllers;
 
 import it.epicode.ProgettoSettimanale.entities.Dipendente;
+import it.epicode.ProgettoSettimanale.exceptions.InvalidDataProvided;
 import it.epicode.ProgettoSettimanale.exceptions.NoElementFoundExc;
 import it.epicode.ProgettoSettimanale.records.DipendenteValidation;
 import it.epicode.ProgettoSettimanale.services.DipendenteService;
@@ -13,9 +14,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
+
 
 @RestController
 @RequestMapping("/api/dipendente")
@@ -28,11 +28,7 @@ public class DipendenteController {
     public ResponseEntity<?> salvaDipendente(@RequestBody @Validated DipendenteValidation  d, BindingResult validation){
 
         if(validation.hasErrors()) {
-
-            List<String> errorMessages = validation.getFieldErrors().stream()
-                    .map(error ->error.getField() + ": " + error.getDefaultMessage())
-                    .toList();
-            return new ResponseEntity<>(errorMessages,HttpStatus.BAD_REQUEST);
+            throw new InvalidDataProvided(validation.getAllErrors().toString());
         }else{
             var Dip = Dipendente.builder()
                     .withNome(d.nome())

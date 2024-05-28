@@ -1,7 +1,15 @@
 package it.epicode.ProgettoSettimanale.exceptions;
 
-public class InvalidDataProvided extends RuntimeException{
+import org.springframework.http.HttpStatus;
+
+public class InvalidDataProvided extends APIError {
+
+    private String message;
+
+    private HttpStatus status = HttpStatus.BAD_REQUEST;
+
     public InvalidDataProvided(String message) {
         super(message);
+
     }
 }

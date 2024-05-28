@@ -1,6 +1,7 @@
 package it.epicode.ProgettoSettimanale.services;
 
 import it.epicode.ProgettoSettimanale.entities.Dipendente;
+import it.epicode.ProgettoSettimanale.exceptions.NoElementFoundExc;
 import it.epicode.ProgettoSettimanale.repositories.DipendenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -28,7 +29,12 @@ public class DipendenteService {
 
     public Optional<Dipendente> getDipendenteById(Long id) {
 
-        return dipendenteRepository.findById(id);
+
+        if(dipendenteRepository.findById(id).isPresent()){
+            return dipendenteRepository.findById(id);
+        }else {
+            throw new NoElementFoundExc("Nessun dipendente trovato con l'ID specificato");
+        }
     }
 
     public Optional<Dipendente> updateDipendenteById(Long id, Dipendente dip) {
@@ -62,7 +68,7 @@ public class DipendenteService {
 
             return Optional.of(dipendenteRepository.save(existingDip));
         }else{
-            return Optional.empty();
+            throw new NoElementFoundExc("Nessun dipendente trovato con l'ID specificato");
 
         }}
     public Optional<Dipendente> deleteDipendenteById(Long id){
@@ -72,7 +78,7 @@ public class DipendenteService {
             dipendenteRepository.deleteById(id);
             return Optional.of(d.get());
         }else{
-            return Optional.empty();
+            throw new NoElementFoundExc("Nessun dipendente trovato con l'ID specificato");
         }
     }
 }

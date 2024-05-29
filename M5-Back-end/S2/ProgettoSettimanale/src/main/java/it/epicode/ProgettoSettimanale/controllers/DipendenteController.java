@@ -28,7 +28,7 @@ public class DipendenteController {
     public ResponseEntity<?> salvaDipendente(@RequestBody @Validated DipendenteValidation  d, BindingResult validation){
 
         if(validation.hasErrors()) {
-            throw new InvalidDataProvided(validation.getAllErrors().toString());
+            throw new InvalidDataProvided("Errore nella compilazione",HttpStatus.BAD_REQUEST);
         }else{
             var Dip = Dipendente.builder()
                     .withNome(d.nome())
@@ -58,7 +58,7 @@ public class DipendenteController {
 
         return new ResponseEntity<>(dip, HttpStatus.OK);
     }catch(Exception e){
-        throw new NoElementFoundExc("Dipendente non trovato");
+        throw new NoElementFoundExc("Dipendente non trovato",HttpStatus.NOT_FOUND);
         }
     }
 

@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 public class ValidatorToUserEntity {
 
     public UserEntity toUserEntity(UserValidation validator) {
-
        UserEntity user = UserEntity.builder()
                .withEmail(validator.email())
                .withPassword(validator.password())
@@ -18,6 +17,5 @@ public class ValidatorToUserEntity {
                .withRoles(validator.roles())
                .build();
        return user;
-
     }
 }

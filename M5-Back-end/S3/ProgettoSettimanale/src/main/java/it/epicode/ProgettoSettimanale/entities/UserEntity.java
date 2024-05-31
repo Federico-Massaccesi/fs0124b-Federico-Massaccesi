@@ -1,8 +1,6 @@
 package it.epicode.ProgettoSettimanale.entities;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.ArrayList;
@@ -14,6 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(setterPrefix = "with")
+@Table(name = "users")
 public class UserEntity extends EntityBase{
 
     private String email;
@@ -22,6 +21,10 @@ public class UserEntity extends EntityBase{
 
     private String username;
 
-    @ManyToMany(cascade = CascadeType.PERSIST)
-    private List<RoleEntity> roles = new ArrayList<>();
+    @ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
+    @JoinTable(
+            name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
+    )    private List<RoleEntity> roles = new ArrayList<>();
 }

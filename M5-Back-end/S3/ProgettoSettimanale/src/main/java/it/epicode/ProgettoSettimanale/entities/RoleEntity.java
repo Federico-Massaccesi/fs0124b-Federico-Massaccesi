@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode(callSuper = true,onlyExplicitlyIncluded = true)
 @Entity
 @Table(name = "roles")
 @Builder(setterPrefix = "with")
@@ -19,6 +19,6 @@ public class RoleEntity extends EntityBase{
 
     private String name;
 
-    @ManyToMany(mappedBy = "users")
+    @ManyToMany(mappedBy = "roles")
     private final List<UserEntity> users = new ArrayList<>();
 }

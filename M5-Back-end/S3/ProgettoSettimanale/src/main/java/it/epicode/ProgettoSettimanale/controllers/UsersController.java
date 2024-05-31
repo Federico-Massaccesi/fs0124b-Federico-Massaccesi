@@ -75,6 +75,7 @@ public class UsersController {
 
             return new ResponseEntity<>(newUser,HttpStatus.ACCEPTED);
 
+
         }
 
     }

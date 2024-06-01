@@ -16,7 +16,6 @@ import java.util.Collection;
 public class SecurityUserDetails implements UserDetails {
     private static final long serialVersionUID = 1L;
 
-    // l'elenco dei ruoli dell'utente
     private Collection<? extends GrantedAuthority> authorities;
     private String password;
     private String username;

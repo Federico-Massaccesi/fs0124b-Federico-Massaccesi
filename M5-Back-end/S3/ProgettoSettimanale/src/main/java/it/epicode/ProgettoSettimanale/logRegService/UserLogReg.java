@@ -3,10 +3,17 @@ package it.epicode.ProgettoSettimanale.logRegService;
 import it.epicode.ProgettoSettimanale.entities.UserEntity;
 import it.epicode.ProgettoSettimanale.repositories.RoleRepository;
 import it.epicode.ProgettoSettimanale.repositories.UserRepository;
+import it.epicode.ProgettoSettimanale.security.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.NoSuchElementException;
+import java.util.Optional;
 
 
 @Service
@@ -23,8 +30,8 @@ public class UserLogReg {
     @Autowired
     AuthenticationManager authenticationManager;
 
-//    @Autowired
-//    JwtU
+    @Autowired
+    JwtUtils jwt;
 
     public UserEntity register(UserEntity user) {
         try {
@@ -36,4 +43,25 @@ public class UserLogReg {
         }
     }
 
+    public Optional<UserEntity> login(String username, String password) {
+        try {
+            var a = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+            a.getAuthorities();
+            SecurityContextHolder.getContext().setAuthentication(a);
+
+            var user = userRepo.findOneByUsername(username).orElseThrow();
+            user.setToken(jwt.generateToken(a));
+            return Optional.of(user);
+        } catch (NoSuchElementException | AuthenticationException e) {
+            throw new RuntimeException(username);
+        }
+    }
+
+    public Optional<UserEntity> get(Long id) {
+        try {
+            return Optional.of(userRepo.findById(id).orElseThrow());
+        } catch (Exception e) {
+            return Optional.empty();
+        }
+    }
 }

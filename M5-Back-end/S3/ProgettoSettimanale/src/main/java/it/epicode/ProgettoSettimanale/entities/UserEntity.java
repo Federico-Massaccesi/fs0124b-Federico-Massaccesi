@@ -27,4 +27,6 @@ public class UserEntity extends EntityBase{
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )    private List<RoleEntity> roles = new ArrayList<>();
+
+    private String token;
 }

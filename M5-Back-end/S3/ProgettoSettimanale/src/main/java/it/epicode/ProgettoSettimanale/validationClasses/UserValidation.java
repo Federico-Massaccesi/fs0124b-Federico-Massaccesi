@@ -18,6 +18,6 @@ public record UserValidation(
         @NotNull
         @NotBlank
          String username,
-
+@NotNull
 List<RoleEntity> roles
 ) {}

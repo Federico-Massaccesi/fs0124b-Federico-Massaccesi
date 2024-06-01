@@ -49,6 +49,17 @@ public class UsersController {
         return new ResponseEntity<>(newUser,headers, HttpStatus.CREATED);
     }
 
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody @Validated UserValidation model, //
+                                   BindingResult validation) {
+        if (validation.hasErrors()) {
+            throw new RuntimeException("no");
+        }
+
+        return new ResponseEntity<>(logReg.login(model.username(), model.password()).orElseThrow(),
+                HttpStatus.OK);
+    }
+
 
     @GetMapping
     public ResponseEntity<List<UserEntity>> getUsers(){

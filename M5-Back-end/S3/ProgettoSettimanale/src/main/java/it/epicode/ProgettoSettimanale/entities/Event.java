@@ -25,5 +25,4 @@ public class Event extends EntityBase{
 
     private boolean disponibilitàPrenotazione = true;
 
-
 }

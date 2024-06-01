@@ -29,13 +29,13 @@ public class SecurityUserDetails implements UserDetails {
     private boolean enabled = true;
 
     public static SecurityUserDetails build(UserEntity user) {
-        var authorities = user.getRoles().stream() //
+        var authorities = user.getRoles().stream()
                 .map(r -> new SimpleGrantedAuthority(r.getName()))
                 .toList();
-        return SecurityUserDetails.builder() //
-                .withUsername(user.getUsername()) //
-                .withPassword(user.getPassword()) //
-                .withAuthorities(authorities) //
+        return SecurityUserDetails.builder()
+                .withUsername(user.getUsername())
+                .withPassword(user.getPassword())
+                .withAuthorities(authorities)
                 .build();
     }
 }

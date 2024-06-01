@@ -1,8 +1,7 @@
 package it.epicode.ProgettoSettimanale.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.ArrayList;
@@ -18,7 +17,7 @@ import java.util.List;
 public class RoleEntity extends EntityBase{
 
     private String name;
-
+    @JsonIgnore
     @ManyToMany(mappedBy = "roles")
     private final List<UserEntity> users = new ArrayList<>();
 }

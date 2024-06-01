@@ -36,10 +36,11 @@ public class ApplicationConfig {
                 .csrf(c -> c.disable())
                 .authorizeHttpRequests(authorize ->
                         authorize
-                                .requestMatchers(HttpMethod.POST).permitAll()
-                                .requestMatchers(HttpMethod.GET).permitAll()
+                                .requestMatchers(HttpMethod.POST,"api/users/login").permitAll()
+                                .requestMatchers(HttpMethod.POST,"api/users/register").permitAll()
                                 .requestMatchers(HttpMethod.PUT).permitAll()
-                                .requestMatchers(HttpMethod.DELETE).permitAll()
+                                .requestMatchers(HttpMethod.DELETE,"/api/users").permitAll()
+                                .requestMatchers(HttpMethod.DELETE,"/api/events").hasAuthority("ORGANIZER")
                                 .anyRequest().authenticated())
                 .httpBasic(Customizer.withDefaults())
                 .sessionManagement(sm ->

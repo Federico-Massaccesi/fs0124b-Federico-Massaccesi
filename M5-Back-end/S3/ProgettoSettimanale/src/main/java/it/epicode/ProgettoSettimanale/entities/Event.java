@@ -27,5 +27,4 @@ public class Event extends EntityBase{
 
     private boolean disponibilitàPrenotazione = true;
 
-    private List<UserEntity> utentiPrenotati;
 }

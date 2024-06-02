@@ -30,6 +30,5 @@ public class UserEntity extends EntityBase{
 
     private String token;
 
-    @ManyToMany
-    private List<Event> eventiPrenotati;
+
 }

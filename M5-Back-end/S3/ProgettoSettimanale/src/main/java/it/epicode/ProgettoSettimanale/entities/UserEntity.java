@@ -29,4 +29,7 @@ public class UserEntity extends EntityBase{
     )    private List<RoleEntity> roles = new ArrayList<>();
 
     private String token;
+
+    @ManyToMany
+    private List<Event> eventiPrenotati;
 }

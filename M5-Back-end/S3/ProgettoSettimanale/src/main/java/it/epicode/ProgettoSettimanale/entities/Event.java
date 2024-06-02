@@ -3,6 +3,8 @@ package it.epicode.ProgettoSettimanale.entities;
 import jakarta.persistence.Entity;
 import lombok.*;
 
+import java.util.List;
+
 @EqualsAndHashCode(callSuper = true)
 @Data
 @Entity
@@ -25,4 +27,5 @@ public class Event extends EntityBase{
 
     private boolean disponibilitàPrenotazione = true;
 
+    private List<UserEntity> utentiPrenotati;
 }

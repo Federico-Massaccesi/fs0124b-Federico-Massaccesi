@@ -14,7 +14,7 @@ public class EventService {
     @Autowired
     private EventRepository eventRepository;
 
-    public Event saveUser(Event event) {
+    public Event saveEvent(Event event) {
         return eventRepository.save(event);
     }
 
@@ -55,7 +55,7 @@ public class EventService {
         }
     }
 
-    public Event delete(Long id){
+    public Event deleteEvent(Long id){
         var foundedEvent = eventRepository.findById(id);
 
         if(foundedEvent.isPresent()) {

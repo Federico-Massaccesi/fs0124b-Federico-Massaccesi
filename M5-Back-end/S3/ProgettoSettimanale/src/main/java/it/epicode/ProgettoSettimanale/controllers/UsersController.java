@@ -4,6 +4,7 @@ import it.epicode.ProgettoSettimanale.entities.UserEntity;
 import it.epicode.ProgettoSettimanale.logRegService.UserLogReg;
 import it.epicode.ProgettoSettimanale.mappers.ValidatorToUserEntity;
 import it.epicode.ProgettoSettimanale.services.UserService;
+import it.epicode.ProgettoSettimanale.validationClasses.LoginValidation;
 import it.epicode.ProgettoSettimanale.validationClasses.UserValidation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -50,7 +51,7 @@ public class UsersController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody @Validated UserValidation model, //
+    public ResponseEntity<?> login(@RequestBody @Validated LoginValidation model, //
                                    BindingResult validation) {
         if (validation.hasErrors()) {
             throw new RuntimeException("no");

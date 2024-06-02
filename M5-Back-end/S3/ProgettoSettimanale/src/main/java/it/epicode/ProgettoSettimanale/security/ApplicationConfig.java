@@ -38,7 +38,8 @@ public class ApplicationConfig {
                         authorize
                                 .requestMatchers(HttpMethod.POST,"api/users/login").permitAll()
                                 .requestMatchers(HttpMethod.POST,"api/users/register").permitAll()
-                                .requestMatchers(HttpMethod.PUT).permitAll()
+                                .requestMatchers(HttpMethod.POST,"api/events").hasAuthority("ORGANIZER")
+                                .requestMatchers(HttpMethod.PUT,"/api/events").hasAuthority("ORGANIZER")
                                 .requestMatchers(HttpMethod.DELETE,"/api/users").permitAll()
                                 .requestMatchers(HttpMethod.DELETE,"/api/events").hasAuthority("ORGANIZER")
                                 .anyRequest().authenticated())
